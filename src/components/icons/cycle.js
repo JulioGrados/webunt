@@ -13,19 +13,19 @@ export const CycleIcon = () => {
                             </g>
                             <g id="Grupo-7" transform="translate(0, 95)">
                                 <circle id="Óvalo" stroke="#1A738D" strokeWidth="5" fill="#FFFFFF" cx="25" cy="25" r="22.5"></circle>
-                                <text id="1" font-family="MontserratRoman-Bold, Montserrat" font-size="20" font-weight="bold" fill="#1A738D">
+                                <text id="1" fontFamily="MontserratRoman-Bold, Montserrat" fontSize="20" fontWeight="bold" fill="#1A738D">
                                     <tspan x="21" y="32">1</tspan>
                                 </text>
                             </g>
                             <g id="Grupo-7" transform="translate(206, 95)">
                                 <circle id="Óvalo" stroke="#1A738D" strokeWidth="5" fill="#FFFFFF" cx="25" cy="25" r="22.5"></circle>
-                                <text id="2" font-family="MontserratRoman-Bold, Montserrat" font-size="20" font-weight="bold" fill="#1A738D">
+                                <text id="2" fontFamily="MontserratRoman-Bold, Montserrat" fontSize="20" fontWeight="bold" fill="#1A738D">
                                     <tspan x="19" y="32">2</tspan>
                                 </text>
                             </g>
                             <g id="Grupo-7" transform="translate(103, 197)">
                                 <circle id="Óvalo" stroke="#1A738D" strokeWidth="5" fill="#FFFFFF" cx="25" cy="25" r="22.5"></circle>
-                                <text id="3" font-family="MontserratRoman-Bold, Montserrat" font-size="20" font-weight="bold" fill="#1A738D">
+                                <text id="3" fontFamily="MontserratRoman-Bold, Montserrat" fontSize="20" fontWeight="bold" fill="#1A738D">
                                     <tspan x="19" y="32">3</tspan>
                                 </text>
                             </g>

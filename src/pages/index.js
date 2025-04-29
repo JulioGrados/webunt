@@ -1,28 +1,54 @@
-import Link from 'next/link'
-import Head from 'next/head'
-import Router from 'next/router'
-import HeaderDitt from '../components/header/ditt'
-import Hero from '../components/hero'
-import Unidades from '../components/sections/unit'
-import SeccionImagen from '../components/sections/imagen'
-import Us from '../components/us'
-import Crew from '../components/crew'
-import FooterDitt from '../components/footer/ditt'
+import SectionContent from '../components/content'
+import Cover from '../components/cover'
+import Footer from '../components/footer'
+import GroupImage from '../components/groupImg'
 import HeadPage from '../components/head'
+import SectionInitiatives from '../components/sectionInitiatives'
+import GoalsSection from '../components/sections/goals'
+import ProgramsSection from '../components/sections/programs'
+import TestimoniesSection from '../components/sections/testimonies'
+import { Container, Section, SectionImg, SectionItem, Trama1, Trama2, Trama3, Trama4 } from '../styles/main'
 
-const Home = ({ meta, country }) => {
-  
-  return (
-    <>
-      <HeadPage title={'DITT'} description={'¡Formando startups de alto impacto!. Visita a detalle nuestra página web y nuestras redes sociales.'} />
-      <Hero />
-      <Unidades />
-      <SeccionImagen />
-      <Us />
-      <Crew />
-      <FooterDitt />
-    </>
-  )
-}
+const Incubaunt = () => {
 
-export default Home
+    return (
+        <>
+            <HeadPage title={'INCUBAUNT'} description={'¡Formando startups de alto impacto!. Visita a detalle nuestra página web y nuestras redes sociales.'} />
+            <Cover />
+            <Section>
+                <Container>
+                    <SectionItem>
+                        <ProgramsSection />
+                    </SectionItem>
+                </Container>
+            </Section>
+            <Section>
+                <Container>
+                    <SectionItem>
+                        <SectionInitiatives />
+                    </SectionItem>
+                </Container>
+            </Section>
+            <SectionImg>
+                <Container>
+                    <GoalsSection />
+                </Container>
+            </SectionImg>
+            <Section>
+                <Container>
+                    <SectionItem>
+                        <TestimoniesSection />
+                    </SectionItem>
+                </Container>
+            </Section>
+            <Section bottom>
+                <Container>
+                    <SectionItem>
+                        <Footer />
+                    </SectionItem>
+                </Container>
+            </Section>
+        </>
+    )
+} 
+export default Incubaunt

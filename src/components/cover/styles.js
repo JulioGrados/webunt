@@ -7,30 +7,48 @@ const blink = keyframes`
         opacity: 0; /* Completamente invisible */
     }
 `
-export const CoverStyled = styled.div`
-    /* position: sticky;
+export const BackgroundVideo = styled.video`
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) 0% 0% / cover, url(/static/img/home.png) center center no-repeat rgb(0, 0, 0);
-    height: 100vh; */
-    background: url('/static/img/home.png') center/cover no-repeat;
-    height: 100vh;
+    height: 100%;
+    object-fit: cover; /* Esto hace que el video se adapte como "background-size: cover" */
+    z-index: 0;
+`
+export const CoverStyled = styled.div`
     position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4rem;
     color: white;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 0;
-    }
+    overflow: hidden;
+`
+export const Overlay = styled.div`
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+`;
+export const Content = styled.div`
+  position: relative;
+  z-index: 2; /* Encima del overlay y el video */
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* para usar todo el alto de pantalla */
+`;
+export const Main = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 `
 export const CoverOtherStyled = styled.div`
     position: sticky;

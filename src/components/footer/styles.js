@@ -79,8 +79,9 @@ export const FooterListItemCircle = styled.div`
     margin-right: 15px;
 `
 export const FooterListItemName =styled.a`
-    font-weight: 400;
+    font-weight: 300;
     font-size: 13px;
+    color: #000;
 `
 export const FooterListItemContent = styled.div`
     display: flex;

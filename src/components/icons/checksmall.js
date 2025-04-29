@@ -1,8 +1,8 @@
 export const CheckSmallIcon = () => {
     return (
         <svg width="13.5px" height="10.5px" viewBox="0 0 13.5 10.5">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Portafolio" transform="translate(-94.7497, -835.75)" fill="#1A738D" fill-rule="nonzero" stroke="#1A738D" stroke-width="0.5">
+            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <g id="Portafolio" transform="translate(-94.7497, -835.75)" fill="#1A738D" fillRule="nonzero" stroke="#1A738D" strokeWidth="0.5">
                     <g id="Group-4" transform="translate(70, 565)">
                         <g id="Grupo-2" transform="translate(24.9998, 268)">
                             <g id="lnr-spell-check" transform="translate(0, 3)">

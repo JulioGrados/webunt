@@ -10,7 +10,7 @@ const Footer = () => {
         <FooterStyled>
             <FooterLeft>
                 <FooterLogo src={`/static/img/logo.png`} />
-                <FooterLine />
+                {/* <FooterLine /> */}
                 <FooterText>
                     ¡Formando startups de alto impacto!. Visita a detalle nuestra página web y nuestras redes sociales.
                 </FooterText>

@@ -1,11 +1,57 @@
 import styled from 'styled-components'
+// Botón hamburguesa
+export const BurgerButton = styled.div`
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  z-index: 1500; /* Encima de todo */
+  margin-left: 20px;
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: ${props => props.white ? '#000' : '#fff'};
+    margin: 3px 0;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
+// Menú lateral
+export const SideMenu = styled.div`
+  position: fixed;
+  top: 0;
+  right: ${props => (props.isOpen ? '0' : '-100%')};
+  width: 250px;
+  height: 100vh;
+  background-color: ${props => props.white ? '#fff' : '#1A738D'};
+  color: ${props => props.white ? '#000' : '#fff'};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease-in-out;
+  z-index: 1200;
+`;
+
+export const SideMenuItem = styled.a`
+  font-size: 20px;
+  margin: 20px 0;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
 export const HeaderStyled = styled.div`
-    /* height: 70px;
-    width: 100%;
-    background: ${props => props.white ? '#fff' : 'rgba(255, 255, 255, 0.4)'};
-    position: relative;
-    z-index: 3;
-    box-shadow: ${props => props.white ? 'rgba(105, 106, 119, 0.1) 0px 2px 4px 0px' : 'none'}; */
     padding: 1rem 2rem;
     width: 100%;
     position: absolute;
@@ -14,6 +60,9 @@ export const HeaderStyled = styled.div`
     z-index: 1000;
     background: ${props => props.white ? '#fff' : 'rgba(255, 255, 255, 0.1)'};
     backdrop-filter: blur(8px);
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
 `
 
 export const HeaderSignStyled = styled.div`
@@ -33,12 +82,18 @@ export const HeaderContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+    }
 `
 export const HeaderLogo = styled.a`
     width: 210px;
     height: 100%;
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+      width: 160px;
+    }
 `
 export const HeaderLogoImg = styled.img`
     width: 100%;
@@ -48,14 +103,22 @@ export const HeaderRight = styled.div`
     align-items: center;
 `
 export const HeaderList = styled.ul`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    display: none; /* Escondemos el menú en móviles */
+  }
 `
 export const HeaderListItem = styled.a`
     font-size: 16px;
     font-weight: 500;
     margin-right: 20px;
     color: ${props=> props.white ? '#000' : '#fff'};
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
 `
 export const HeaderButton = styled.a`
     width: 135px;
@@ -67,6 +130,15 @@ export const HeaderButton = styled.a`
     border-radius: 18px;
     color: #fff;
     background-color: #1A738D;
+    &:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      width: 120px;
+      height: 34px;
+      font-size: 13px;
+    }
 `
 
 /* DITT */

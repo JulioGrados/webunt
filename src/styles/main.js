@@ -9,7 +9,6 @@ export const Container = styled.div`
   }
 `
 export const Section = styled.section`
-  position: relative;
   border-bottom: ${props => props.bottom ? '5px solid #1A738D' : 'none'};
   
 `

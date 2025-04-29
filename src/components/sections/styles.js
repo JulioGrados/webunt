@@ -20,6 +20,7 @@ export const MentorsSectionStyled = styled.div`
     align-items: center;
     text-align: center;
     width: 100%;
+    z-index: -1;
 `
 export const TestimoniesSectionStyled = styled.div`
     display: flex;
@@ -231,6 +232,7 @@ export const ProgramsPageItem = styled.li`
 `
 export const ProgramsPageFigure = styled.div`
     position: relative;
+    z-index: -1;
 `
 export const ProgramsPageImg = styled.img`
     width: 397px;
