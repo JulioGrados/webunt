@@ -1,3 +1,4 @@
+import { ArrowBetween } from "../arrowBetween"
 import { CycleIcon } from "../icons/cycle"
 import Initiative from "../initiatives"
 import Title from "../title"
@@ -34,18 +35,26 @@ const SectionInitiatives = () => {
             <Title text={'Iniciativas para la sostenibilidad'} left={false} />
             <InitiativeContent>
                 <InitiativesList>
-                    {
-                        initiatives.map((initiative, index) => (
-                            <Initiative key={index} index={index} name={initiative.name} img={initiative.img} supported={initiative.supported} text={initiative.text} supporimg={initiative.supporimg} />
-                        ))
-                    }
+                {initiatives.map((initiative, index) => (
+                    <React.Fragment key={index}>
+                    <Initiative
+                        index={index}
+                        name={initiative.name}
+                        img={initiative.img}
+                        supported={initiative.supported}
+                        text={initiative.text}
+                        supporimg={initiative.supporimg}
+                    />
+                    {index < initiatives.length - 1 && <ArrowBetween />}
+                    </React.Fragment>
+                ))}
                 </InitiativesList>
-                <InitiativeIcon>
+                {/* <InitiativeIcon>
                     <CycleIcon />
                 </InitiativeIcon>
                 <InitiativeItem>
                     <Initiative index={2} img={initiative.img} supported={initiative.supported} name={initiative.name} text={initiative.text} supporimg={initiative.supporimg} margin={false} />
-                </InitiativeItem>
+                </InitiativeItem> */}
             </InitiativeContent>
         </SectionInitiativesStyled>
     )

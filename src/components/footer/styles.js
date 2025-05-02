@@ -4,6 +4,14 @@ export const FooterStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    /* padding: 2rem 1.5rem; */
+    /* background-color: #f7f7f7; */
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 `
 export const FooterLine = styled.hr`
     width: 100%;
@@ -19,19 +27,35 @@ export const FooterLeft = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     padding-right: 40px;
+    @media (max-width: 768px) {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding-right: 0;
+    }
 `
 export const FooterLogo = styled.img`
     width: 220px;
+    @media (max-width: 768px) {
+        width: 180px;
+    }
 `
 export const FooterText = styled.p`
     margin: 20px 0 30px 0;
     line-height: 22px;
     font-size: 13px;
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+    }
 `
 export const FooterSocial = styled.ul`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @media (max-width: 768px) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 `
 export const FooterSocialItem = styled.li`
     width: 40px;
@@ -49,6 +73,12 @@ export const FooterRight = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 `
 
 export const FooterRightItem = styled.div`
@@ -57,6 +87,11 @@ export const FooterRightItem = styled.div`
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    @media (max-width: 768px) {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
 `
 export const FooterTitle = styled.h3`
     margin: 0;
@@ -70,6 +105,12 @@ export const FooterListItem = styled.li`
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 `
 export const FooterListItemCircle = styled.div`
     width: 8px;
@@ -82,6 +123,7 @@ export const FooterListItemName =styled.a`
     font-weight: 300;
     font-size: 13px;
     color: #000;
+    text-decoration: none;
 `
 export const FooterListItemContent = styled.div`
     display: flex;

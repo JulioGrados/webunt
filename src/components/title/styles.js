@@ -14,4 +14,8 @@ export const LineStyled = styled.hr`
     margin: ${props => (props.left ? '25px 0 0 0%' : '25px auto 0')};
     border-radius: 40px;
     border: none;
+
+    @media (max-width: 768px) {
+        margin: 20px auto 0;
+    }
 `

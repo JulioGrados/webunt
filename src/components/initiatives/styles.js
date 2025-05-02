@@ -3,12 +3,22 @@ import styled from 'styled-components'
 export const InitiativeStyled = styled.li`
     display: flex;
     flex-direction: column;
-    width: ${props => props.width ? '33%' : '400px'};
+    width: ${props => props.width ? '30%' : '400px'};
+    min-width: 280px;
+    max-width: 100%;
     margin-bottom: ${props => props.margin ? '60px' : '0px'};
-    /* border: 3px solid #1A738D; */
     border-radius: 20px;
     padding: 20px;
-    /* background-color: rgba(26, 115, 141, 0.1); */
+    background-color: rgba(26, 115, 141, 0.06);
+
+    @media (max-width: 1024px) {
+        width: 45%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 500px;
+    }
 `
 export const InitiativeHeader = styled.div`
     display: flex;
@@ -46,6 +56,12 @@ export const InitiativeText = styled.p`
     margin: 0;
     font-size: ${props => props.width ? '16px' : '13px'};
     line-height: ${props => props.width ? '25px' : '20px'};
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
 `
 export const InitiativeOtherText = styled.p`
     margin: 0 0 15px 0;
@@ -66,6 +82,11 @@ export const InitiativeName = styled.h3`
     font-size: ${props => props.width ? '30px' : '28px'};
     font-weight: 600;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+        text-align: center;
+    }
 `
 export const InitiativeNameOther = styled.h3`
     margin: 0 0 0 15px;
@@ -116,4 +137,9 @@ export const InitiativeButton = styled.a`
     color: #fff;
     font-weight: 600;
     background-color: #1A738D;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+    width: 100%;
+    }
 `

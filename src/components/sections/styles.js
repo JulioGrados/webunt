@@ -6,13 +6,32 @@ export const GoalsSectionStyled = styled.div`
     align-items: center;
     text-align: center;
     padding: 120px 0;
+
+    @media (max-width: 768px) {
+        padding: 80px 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: 60px 0;
+    }
 `
 export const GoalsList = styled.ul`
     margin-top: 60px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+        gap: 1.5rem;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 1rem;
+    }
 `
 export const MentorsSectionStyled = styled.div`
     display: flex;
@@ -33,8 +52,19 @@ export const TestimoniesList = styled.ul`
     width: 100%;
     display: flex;
     margin-top: 60px;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+        gap: 1rem;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
 `
 export const ProgramsSectionStyled = styled.div`
     display: flex;
