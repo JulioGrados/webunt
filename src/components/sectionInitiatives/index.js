@@ -45,7 +45,7 @@ const SectionInitiatives = () => {
                         text={initiative.text}
                         supporimg={initiative.supporimg}
                     />
-                    {index < initiatives.length - 1 && <ArrowBetween />}
+                    {/* {index < initiatives.length - 1 && <ArrowBetween />} */}
                     </React.Fragment>
                 ))}
                 </InitiativesList>

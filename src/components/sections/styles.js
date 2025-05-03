@@ -19,7 +19,7 @@ export const GoalsList = styled.ul`
     margin-top: 60px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
