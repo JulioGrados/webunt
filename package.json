@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://bitbucket.org/devcodela/web-unt.git"
   },
+  "engines": {
+    "node": "16.20.2"
+  },
   "author": "Julio Giampiere Grados Caballero",
   "license": "ISC",
   "bugs": {
