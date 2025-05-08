@@ -43,7 +43,7 @@
     "sitemap": "^6.1.0",
     "styled-components": "^5.0.1",
     "url": "^0.11.0",
-    "utils": "git+https://julio_giampiere_grados:ATBBK8zzRBbJK7ukyerAGXPytVQdB31C3BCC@bitbucket.org/devcodela/utils-unt.git"
+    "utils": "git+https://julio_giampiere_grados:ATBBB3YvFHF6yaBRupfawdTvfS560D2BEDCE@bitbucket.org/devcodela/utils-unt.git"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1",
