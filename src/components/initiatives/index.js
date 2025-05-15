@@ -5,10 +5,6 @@ const Initiative = ({index, img, text, name, supported, supporimg, margin = true
     return (
         <InitiativeStyled margin={margin} width={width}>
             <InitiativeHeader>
-                <InitiativeHeaderNumber>
-                    {index + 1}
-                </InitiativeHeaderNumber>
-                {/* <InitiativeHeaderImg src={`/static/img/${img}`} alt='initiative' /> */}
                 <InitiativeName width={width}>
                     Incuba {name}
                 </InitiativeName>

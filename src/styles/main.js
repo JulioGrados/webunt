@@ -36,7 +36,7 @@ export const SectionItem = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
 `
 export const SectionImg = styled.section`
   position: sticky;

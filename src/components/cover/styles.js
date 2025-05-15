@@ -102,6 +102,10 @@ export const CoverButtonOne = styled.a`
     line-height: 50px;
     color: #fff;
     background-color: #1A738D;
+    &:hover {
+        color: #fff;
+        transform: scale(1.1);
+    }
 `
 export const CoverButtonTwo = styled.a`
     width: 180px;
@@ -114,6 +118,11 @@ export const CoverButtonTwo = styled.a`
     border: 2px solid #fff;
     color: #fff;
     margin-left: 30px;
+    &:hover {
+        color: #1A738D;
+        background: #fff;
+        transform: scale(1.1);
+    }
 `
 export const CoverImg1 = styled.img`
     position: absolute;

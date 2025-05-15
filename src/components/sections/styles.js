@@ -71,6 +71,7 @@ export const ProgramsSectionStyled = styled.div`
     align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
 `
 export const ProgramContent = styled.ul`
     width: 100%;
@@ -437,4 +438,9 @@ export const SectionContactFormButton = styled.button`
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
     cursor: pointer;
+`
+
+export const Section = styled.div`
+    width: 100%;
+    padding-top: 80px;
 `

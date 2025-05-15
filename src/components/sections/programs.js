@@ -1,6 +1,9 @@
+import UnidadesLeft from '../unity/left'
+import UnidadesRight from '../unity/rigth'
 import { Program } from "../program"
 import Title from "../title"
-import { ProgramContent, ProgramRecatangle, ProgramsSectionStyled } from "./styles"
+import UnitSection  from '../unity'
+import { ProgramContent, ProgramRecatangle, ProgramsSectionStyled, Section } from "./styles"
 
 const programs = [
     {
@@ -23,14 +26,8 @@ const programs = [
 const ProgramsSection = () => {
     return (
         <ProgramsSectionStyled>
-            <Title text={'Conoce nuestros programas de innovación'} left={false} />
-            <ProgramContent>
-                <Program name={programs[0].name} description={programs[0].description} img={programs[0].img} margin={'220px'} />
-                <ProgramRecatangle margin={'290px'}/>
-                <Program name={programs[1].name} description={programs[1].description} img={programs[1].img} margin={'105px'} />
-                <ProgramRecatangle margin={'175px'} />
-                <Program name={programs[2].name} description={programs[2].description} img={programs[2].img} margin={'0px'} />
-            </ProgramContent>
+            <Title text={'Nuestros programas de innovación'} left={false} />
+            <UnitSection />
         </ProgramsSectionStyled>
     )
 }

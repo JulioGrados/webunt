@@ -40,7 +40,7 @@ const Cover = () => {
                                 Nuestro objetivo es que más emprendedores de La Libertad y el Perú, encuentren el camino del éxito. 
                             </CoverText>
                             <CoverButtons>
-                                <CoverButtonOne>
+                                <CoverButtonOne href='/signup'>
                                     Iniciar Sesión
                                 </CoverButtonOne>
                                 <CoverButtonTwo>
