@@ -22,7 +22,8 @@ export const SectionInitiativesStyled = styled.div`
 `
 export const InitiativesList = styled.ul`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
@@ -64,7 +65,6 @@ export const InitiativeItem = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-
     @media (max-width: 768px) {
         margin-top: 40px;
         padding: 0 1rem;

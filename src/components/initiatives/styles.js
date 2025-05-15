@@ -6,11 +6,15 @@ export const InitiativeStyled = styled.li`
     width: ${props => props.width ? '30%' : '400px'};
     min-width: 280px;
     max-width: 100%;
-    margin-bottom: ${props => props.margin ? '60px' : '0px'};
+    margin-bottom: 10px;
     border-radius: 20px;
     padding: 20px;
     background-color: rgba(26, 115, 141, 0.06);
-
+    &:last-child {
+        /* Si esta caja baja de línea, se centrará */
+        margin-left: auto;
+        margin-right: auto;
+    }
     @media (max-width: 1024px) {
         width: 45%;
     }

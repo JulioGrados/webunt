@@ -18,17 +18,15 @@ const initiatives = [
         supported: 'Inha university',
         text: 'Programa de formación académica en emprendimiento e innovación de la UNT. Programa de formación académica en emprendimiento e innovación de la UNT.',
         supporimg: 'resp-angel.jpeg'
+    },
+    {
+        name: 'Assesment',
+        img: 'assesment.png',
+        supported: 'Inha university',
+        text: 'Programa de formación académica en emprendimiento e innovación de la UNT. Programa de formación académica en emprendimiento e innovación de la UNT.',
+        supporimg: 'resp-assesment.png'
     }
 ]
-
-const initiative = {
-    name: 'Assesment',
-    img: 'assesment.png',
-    supported: 'Inha university',
-    text: 'Programa de formación académica en emprendimiento e innovación de la UNT. Programa de formación académica en emprendimiento e innovación de la UNT.',
-    supporimg: 'resp-assesment.png'
-}
-
 const SectionInitiatives = () => {
     return (
         <SectionInitiativesStyled>
@@ -45,16 +43,9 @@ const SectionInitiatives = () => {
                         text={initiative.text}
                         supporimg={initiative.supporimg}
                     />
-                    {/* {index < initiatives.length - 1 && <ArrowBetween />} */}
                     </React.Fragment>
                 ))}
                 </InitiativesList>
-                {/* <InitiativeIcon>
-                    <CycleIcon />
-                </InitiativeIcon>
-                <InitiativeItem>
-                    <Initiative index={2} img={initiative.img} supported={initiative.supported} name={initiative.name} text={initiative.text} supporimg={initiative.supporimg} margin={false} />
-                </InitiativeItem> */}
             </InitiativeContent>
         </SectionInitiativesStyled>
     )
