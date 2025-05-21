@@ -41,7 +41,7 @@ export const SectionItem = styled.article`
 export const SectionImg = styled.section`
   position: sticky;
   width: 100%;
-  background: linear-gradient(rgba(3, 37, 57, 0.3), rgba(3, 37, 57, 0.3)) 0% 0% / cover, url(/static/img/home2.jpg) center center no-repeat rgb(3, 37, 57);
+  background: linear-gradient(to bottom right, rgba(3, 37, 57, .2), rgba(26, 115, 141, .2)) 0% 0% / cover, url(/static/img/home2.jpg) center center no-repeat;
 `
 export const SectionTitle = styled.h1`
   text-align: center;

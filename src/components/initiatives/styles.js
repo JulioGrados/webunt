@@ -24,6 +24,27 @@ export const InitiativeStyled = styled.li`
         max-width: 500px;
     }
 `
+
+export const InitiativeStyledPage = styled.li`
+    display: flex;
+    flex-direction: column;
+    width: ${props => props.width ? '30%' : '400px'};
+    min-width: 280px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(26, 115, 141, 0.06);
+    @media (max-width: 1024px) {
+        width: 45%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 500px;
+    }
+`
+
 export const InitiativeHeader = styled.div`
     display: flex;
     justify-content: flex-start;
@@ -58,8 +79,8 @@ export const InitiativeOtherBody = styled.div`
 `
 export const InitiativeText = styled.p`
     margin: 0;
-    font-size: ${props => props.width ? '16px' : '13px'};
-    line-height: ${props => props.width ? '25px' : '20px'};
+    font-size: ${props => props.width ? '16px' : '15px'};
+    line-height: ${props => props.width ? '25px' : '25px'};
 
     @media (max-width: 768px) {
         font-size: 14px;
@@ -110,9 +131,9 @@ export const InitiativeSupported = styled.div`
     align-items: center;
 `
 export const InitiativeSupportedImg = styled.img`
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
 `
 export const InitiativeSupportedContent = styled.div`
     display: flex;
@@ -123,12 +144,12 @@ export const InitiativeSupportedContent = styled.div`
 export const InitiativeSupportedText = styled.h5`
     margin: 0;
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 `
 export const InitiativeSupportedName = styled.p`
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
 `
 export const InitiativeButton = styled.a`

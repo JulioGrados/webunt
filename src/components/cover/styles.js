@@ -32,7 +32,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to bottom right, rgba(3, 37, 57, .2), rgba(26, 115, 141, .2));
   z-index: 1;
 `;
 export const Content = styled.div`
@@ -53,7 +53,7 @@ export const Main = styled.div`
 export const CoverOtherStyled = styled.div`
     position: sticky;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) 0% 0% / cover, url(/static/img/home.png) center center no-repeat rgb(0, 0, 0);
+    background: linear-gradient(to bottom right, rgba(3, 37, 57, .3), rgba(26, 115, 141, .3)) 0% 0% / cover, url(/static/img/home.png) center center no-repeat rgb(0, 0, 0);
 `
 export const CoverContent = styled.div`
     width: 100%;
@@ -82,8 +82,8 @@ export const CoverTitle = styled.h1`
 `
 export const CoverText = styled.p`
     margin: 20px 0 40px 0;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 600;
     color: #fff;
 `
 export const CoverButtons = styled.div`

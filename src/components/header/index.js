@@ -10,7 +10,8 @@ import {
     HeaderStyled,
     BurgerButton,
     SideMenu,
-    SideMenuItem
+    SideMenuItem,
+    HeaderVersion
 } from "./styles"
 
 const Header = ({white = false}) => {
@@ -21,6 +22,7 @@ const Header = ({white = false}) => {
                 <HeaderContent>
                     <HeaderLogo href="/">
                         <HeaderLogoImg src={`/static/img/logo.png`} />
+                        <HeaderVersion>2.0</HeaderVersion>
                     </HeaderLogo>
                     <HeaderRight>
                         <HeaderList>
