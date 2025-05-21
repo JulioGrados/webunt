@@ -64,7 +64,15 @@ export const HeaderStyled = styled.div`
       padding: 1rem;
     }
 `
-
+export const HeaderVersion = styled.span`
+  font-size: 25px;
+  font-weight: 800;
+  position: absolute;
+  right: -30px;
+  bottom: -10px;
+  line-height: normal;
+  color: orange;
+`
 export const HeaderSignStyled = styled.div`
     height: 70px;
     width: 100%;
@@ -89,6 +97,7 @@ export const HeaderContent = styled.div`
 export const HeaderLogo = styled.a`
     width: 210px;
     height: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     @media (max-width: 768px) {

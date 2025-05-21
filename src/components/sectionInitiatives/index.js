@@ -9,21 +9,21 @@ const initiatives = [
         name: 'Academy',
         img: 'academy.png',
         supported: 'Inha university',
-        text: 'Programa de formación académica en emprendimiento e innovación de la UNT. Programa de formación académica en emprendimiento e innovación de la UNT.',
+        text: 'Programa de formación académica en emprendimiento e innovación de la UNT, con el respaldo de Inha University',
         supporimg: 'resp-academy.png'
     },
     {
         name: 'Angel',
         img: 'angel.png',
-        supported: 'Inha university',
-        text: 'Programa de formación académica en emprendimiento e innovación de la UNT. Programa de formación académica en emprendimiento e innovación de la UNT.',
+        supported: 'The Board',
+        text: 'Programa para el fomento y desarrollo de la red de inversionistas ángeles de la UNT con el respaldo de The Board.',
         supporimg: 'resp-angel.jpeg'
     },
     {
         name: 'Assesment',
         img: 'assesment.png',
-        supported: 'Inha university',
-        text: 'Programa de formación académica en emprendimiento e innovación de la UNT. Programa de formación académica en emprendimiento e innovación de la UNT.',
+        supported: 'Wayra',
+        text: 'Programa para la identificación de desafíos empresariales del sector productivo y desarrollo de proyectos de innovación con el respaldo de Wayra.',
         supporimg: 'resp-assesment.png'
     }
 ]

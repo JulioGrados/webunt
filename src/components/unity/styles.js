@@ -24,7 +24,7 @@ export const Card = styled.div`
 export const Overlay = styled.div`
   position: absolute;
   inset: 0;
-  background-color: #032539;
+  background: linear-gradient(rgba(3, 37, 57, .4), rgba(26, 115, 141, .4));
   opacity: 0.7;
 `;
 
@@ -41,15 +41,16 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 30px;
   margin-bottom: 1rem;
   font-weight: bold;
   color: white;
 `;
 
 export const Description = styled.p`
-  font-size: 1rem;
+  font-size: 18px;
   margin-bottom: 2rem;
+  font-weight: 400;
 `;
 
 export const Button = styled.a`

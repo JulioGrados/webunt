@@ -15,14 +15,14 @@ const initiatives = [
     {
         name: 'Angel',
         img: 'angel.png',
-        supported: 'Inha university',
+        supported: 'The Board',
         text: 'Programa de formación académica en emprendimiento e innovación de la UNT.',
         supporimg: 'resp-angel.jpeg'
     },
     {
         name: 'Assesment',
         img: 'assesment.png',
-        supported: 'Inha university',
+        supported: 'Wayra',
         text: 'Programa de formación académica en emprendimiento e innovación de la UNT.',
         supporimg: 'resp-assesment.png'
     }

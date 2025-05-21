@@ -8,7 +8,11 @@ const spin = keyframes`
         transform: rotateY(360deg);
     }
 `
-
+export const GroupImageContent = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+`
 export const GroupImageStyles = styled.div`
     display: flex;
     flex-direction: column;
@@ -19,21 +23,24 @@ export const GroupImageStyles = styled.div`
     z-index: -1;
 `
 export const GroupImg1 = styled.img`
-    width: 350px;
-    height: 240px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 4px;
     animation: ${spin}  2s forwards;
 `
 export const GroupImg2 = styled.img`
-    width: 157px;
-    height: 240px;
+    width: 240px;
+    height: 140px;
     border-radius: 4px;
     animation: ${spin}  2s forwards;
 `
 export const GroupImg3 = styled.img`
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 200px;
+    margin-top: -55px;
     border-radius: 4px;
+    object-fit: cover;
     animation: ${spin}  2s forwards;
 `
 export const GroupImg4 = styled.img`
