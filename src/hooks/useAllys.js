@@ -37,10 +37,8 @@ export const useAllys = () => {
     return dispatch(reloadState())
   }
 
-  const allys = list
-
   return {
-    allys,
+    list,
     loading,
     update,
     create,

@@ -8,6 +8,7 @@ import portfolio from './portfolio'
 import program from './program'
 import welcome from './welcome'
 import question from './question'
+import upload from './upload'
 
 export default {
   auth,
@@ -19,5 +20,6 @@ export default {
   portfolio,
   program,
   welcome,
-  question
+  question,
+  upload
 }

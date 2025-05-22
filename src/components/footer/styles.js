@@ -106,7 +106,7 @@ export const FooterListItem = styled.li`
     align-items: center;
     margin-bottom: 10px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 
     @media (max-width: 768px) {
         justify-content: center;

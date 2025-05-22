@@ -7,15 +7,16 @@ import HeaderSign from '../components/header/sign'
 import Upload from '../components/upload'
 import { IncomePage } from '../layout/income'
 import { useSession } from '../hooks'
+import { ScrollPage } from '../layout/scroll'
 
 const UploadPage = () => {
   const { loggedUser, logout } = useSession()
   return (
-    <IncomePage>
+    <ScrollPage>
       <HeadPage title={'IncubaUNT - Upload'} description={'Upload'} />
       <HeaderSign user={loggedUser} handleLogout={logout}  />
       <Upload />
-    </IncomePage>
+    </ScrollPage>
   )
 }
 

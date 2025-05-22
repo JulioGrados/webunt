@@ -16,6 +16,10 @@ import { useStateData } from '../../../hooks'
 
 const Option = Select.Option
 
+import { MEDIA_PATH } from 'utils/files/path'
+
+console.log('MEDIA_PATH', MEDIA_PATH)
+
 const FormTemplate = ({ program, loading, onSubmit, form, title }) => {
   const { data, changeAllData, changeData, cleanData } = useStateData(
     program || {}
@@ -44,6 +48,9 @@ const FormTemplate = ({ program, loading, onSubmit, form, title }) => {
         const formData = new window.FormData()
         if (data.imageFile) {
           formData.append('image', data.imageFile.originFileObj)
+        }
+        if (data.imageLogo) {
+          formData.append('logo', data.imageLogo.originFileObj)
         }
         formData.append('data', JSON.stringify(values))
 
@@ -90,11 +97,28 @@ const FormTemplate = ({ program, loading, onSubmit, form, title }) => {
                   initialValue: data.description || undefined
                 })(<Input onChange={e => changeData('description', e.target.value)} />)}
               </Form.Item>
+              <Form.Item label='Texto'>
+                {getFieldDecorator('text', {
+                  rules: [
+                    {
+                      message: 'Ingresa el text.'
+                    }
+                  ],
+                  initialValue: data.text || undefined
+                })(<Input onChange={e => changeData('text', e.target.value)} />)}
+              </Form.Item>
               <Form.Item label='Imagen'>
                 <UploadImage
                   image={data.imageFile}
                   url={data && data.image}
                   handleChange={file => changeData('imageFile', file)}
+                />
+              </Form.Item>
+              <Form.Item label='Logo'>
+                <UploadImage
+                  image={data.imageLogo}
+                  url={data && data.logo}
+                  handleChange={file => changeData('imageLogo', file)}
                 />
               </Form.Item>
             </FormRight>

@@ -10,7 +10,7 @@ export const BaseLogo = styled.div`
 `
 
 export const BaseLogoImg = styled.img`
-  height: 100%;
+  width: 150px;
 `
 
 export const BaseFooter = styled(Footer)`

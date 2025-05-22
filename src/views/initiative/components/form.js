@@ -91,6 +91,46 @@ const FormTemplate = ({ initiative, loading, onSubmit, form, title }) => {
                   initialValue: data.description || undefined
                 })(<Input onChange={e => changeData('description', e.target.value)} />)}
               </Form.Item>
+              <Form.Item label='Característica 1'>
+                {getFieldDecorator('char1', {
+                  rules: [
+                    {
+                      message: 'Ingresa el char1.'
+                    }
+                  ],
+                  initialValue: data.char1 || undefined
+                })(<Input onChange={e => changeData('char1', e.target.value)} />)}
+              </Form.Item>
+              <Form.Item label='Característica 2'>
+                {getFieldDecorator('char2', {
+                  rules: [
+                    {
+                      message: 'Ingresa el char2.'
+                    }
+                  ],
+                  initialValue: data.char2 || undefined
+                })(<Input onChange={e => changeData('char2', e.target.value)} />)}
+              </Form.Item>
+              <Form.Item label='Característica 3'>
+                {getFieldDecorator('char3', {
+                  rules: [
+                    {
+                      message: 'Ingresa el char3.'
+                    }
+                  ],
+                  initialValue: data.char3 || undefined
+                })(<Input onChange={e => changeData('char3', e.target.value)} />)}
+              </Form.Item>
+              <Form.Item label='Característica 4'>
+                {getFieldDecorator('char4', {
+                  rules: [
+                    {
+                      message: 'Ingresa el char4.'
+                    }
+                  ],
+                  initialValue: data.char4 || undefined
+                })(<Input onChange={e => changeData('char4', e.target.value)} />)}
+              </Form.Item>
               <Form.Item label='Respaldo'>
                 {getFieldDecorator('back', {
                   rules: [
@@ -104,7 +144,7 @@ const FormTemplate = ({ initiative, loading, onSubmit, form, title }) => {
               <Form.Item label='Imagen'>
                 <UploadImage
                   image={data.imageFile}
-                  url={data && data.image}
+                  url={data && data.backImage}
                   handleChange={file => changeData('imageFile', file)}
                 />
               </Form.Item>

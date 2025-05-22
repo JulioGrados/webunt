@@ -15,6 +15,22 @@ const menu = handleLogout => {
         </a>
       </Menu.Item>
       <Menu.Item>
+        <a
+          rel='noopener noreferrer'
+          href='/subir-archivos'
+        >
+          Subir archivos
+        </a>
+      </Menu.Item>
+      <Menu.Item>
+        <a
+          rel='noopener noreferrer'
+          href='/resultados'
+        >
+          Resultados
+        </a>
+      </Menu.Item>
+      <Menu.Item>
         <a onClick={handleLogout} rel='noopener noreferrer'>
           Cerrar sesión
         </a>

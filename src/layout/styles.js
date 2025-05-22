@@ -12,3 +12,10 @@ export const Income = styled.div`
     background-color: #F4F7FD;
     overflow: hidden; /* Evita scroll en toda la página */
 `
+
+export const Scroll = styled.div`
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F7FD;
+`

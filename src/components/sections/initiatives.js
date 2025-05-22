@@ -1,3 +1,4 @@
+import { useInitiatives } from "../../hooks"
 import { CycleIcon } from "../icons/cycle"
 import Initiative from "../initiatives"
 import InitiativeOther from "../initiatives/other"
@@ -29,11 +30,23 @@ const initiatives = [
 ]
 
 const SectionInitiativesPage = () => {
+    const { list } = useInitiatives({})
     return (
         <SectionInitiativesPageStyled>
             {
-                initiatives.map((initiative, index) => (
-                    <InitiativeOther key={index} index={index} img={initiative.img} supported={initiative.supported} text={initiative.text} supporimg={initiative.supporimg} name={initiative.name} width />
+                list.map((initiative, index) => (
+                    <InitiativeOther key={index} index={index} 
+                        img={initiative.backImage} 
+                        supported={initiative.back} 
+                        text={initiative.description} 
+                        supporimg={initiative.backImage} 
+                        name={initiative.name} 
+                        char1={initiative.char1}
+                        char2={initiative.char2}
+                        char3={initiative.char3}
+                        char4={initiative.char4}
+                        width 
+                    />
                 ))
             }
         </SectionInitiativesPageStyled>

@@ -1,36 +1,28 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
 import {
-  getGoals,
-  editGoal,
-  addGoal,
-  deleteGoal,
+  getUploads,
+  editUpload,
+  addUpload,
+  deleteUpload,
   reloadState
-} from '../redux/reducers/goal'
+} from '../redux/reducers/upload'
 
-export const useGoals = () => {
-  const { list, loading, error, current, loaded } = useSelector(
-    state => state.goal
-  )
+export const useUploads = ({bot}) => {
+  const { list, loading, error, current } = useSelector(state => state.upload)
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    if (list.length === 0 && loading === false) {
-      dispatch(getGoals())
-    }
-  }, [])
-
   const update = async (id, data) => {
-    return dispatch(editGoal(id, data))
+    return dispatch(editUpload(id, data))
   }
 
   const create = async data => {
-    return dispatch(addGoal(data))
+    console.log('data', data)
+    return dispatch(addUpload(data))
   }
 
   const remove = async id => {
-    return dispatch(deleteGoal(id))
+    return dispatch(deleteUpload(id))
   }
 
   const reload = async () => {
@@ -45,7 +37,6 @@ export const useGoals = () => {
     error,
     current,
     remove,
-    loaded,
     reload
   }
 }

@@ -1,3 +1,4 @@
+import { useAllys } from "../../hooks"
 import Ally from "../ally"
 import Title from "../title"
 import { TestimoniesList, TestimoniesSectionStyled } from "./styles"
@@ -33,13 +34,15 @@ const testimonies = [
 ]
 
 const TestimoniesSection = () => {
+    const {list} = useAllys({})
+    console.log('list', list)
     return (
         <TestimoniesSectionStyled>
             <Title text={'Nuestros aliados'} left={false} />
             <TestimoniesList>
                 {
-                    testimonies.map(testimonie => (
-                        <Ally img={testimonie.img} />
+                    list.map(item => (
+                        <Ally img={'http://localhost:8001' + item.image} />
                     ))
                 }
             </TestimoniesList>
