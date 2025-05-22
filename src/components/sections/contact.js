@@ -46,17 +46,6 @@ export const SectionContact = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                 />
             </SectionContactMaps>
-            <SectionContactMesaje>
-                <SectionContactMesajeTitle>Enviar un mensaje:</SectionContactMesajeTitle>
-                <SectionContactMesajeText>Tu correo electrónico no será publicado. Los campos requeridos están marcados.</SectionContactMesajeText>
-                <SectionContactForm method="post">
-                    <SectionContactFormInput placeholder="Nombres y apellidos *" />
-                    <SectionContactFormInput placeholder="Correo electrónico *" />
-                    <SectionContactFormInput placeholder="Asunto *" />
-                    <SectionContactFormTextarea placeholder="Mensaje *" />
-                    <SectionContactFormButton type="submit">Enviar mensaje</SectionContactFormButton>
-                </SectionContactForm>
-            </SectionContactMesaje>
         </SectionContactStyled>
     )
 }

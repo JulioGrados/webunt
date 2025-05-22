@@ -1,3 +1,4 @@
+import { usePrograms } from "../../hooks";
 import { Section, Card, Overlay, Content, Title, Description, Button } from "./styles"
 const cards = [
     {
@@ -18,14 +19,15 @@ const cards = [
 ];
 
 const UnitSection = () => {
+    const { list } = usePrograms()
     return (
       <Section>
-        {cards.map((card, index) => (
-          <Card key={index} bg={card.bg}>
+        {list.map((card, index) => (
+          <Card key={index} bg={'http://localhost:8001' + card.image}>
             <Overlay />
             <Content>
-              <Title>{card.title}</Title>
-              <Description>{card.description}</Description>
+              <Title>Incuba {card.name}</Title>
+              <Description>{card.text}</Description>
               <Button href='/programas'>Conoce más</Button>
             </Content>
           </Card>

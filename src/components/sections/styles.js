@@ -319,6 +319,10 @@ export const ProgramPageButton = styled.a`
     color: #fff;
     background-color: #1A738D;
     border-radius: 15px;
+    &:hover {
+        color: #fff;
+        transform: scale(1.01);
+    }
 `
 export const SectionInitiativesPageStyled = styled.ul`
     display: flex;

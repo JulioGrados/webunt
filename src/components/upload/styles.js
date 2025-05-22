@@ -68,7 +68,8 @@ display: none;
 
 // Texto o nombre del archivo
 export const PlaceholderText = styled.p`
-color: ${(props) => (props.hasFile ? "#1a738d" : "#b3b3b3")};
+color: ${(props) => (props.hasFile ? "#1a738d" : "#272727")};
+font-weight: 400;
 font-size: 14px;
 margin: 0;
 transition: color 0.3s ease;

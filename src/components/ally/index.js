@@ -3,7 +3,7 @@ import { AllyImg, AllyStyled } from "./styles"
 const Ally = ({img}) => {
     return (
         <AllyStyled>
-            <AllyImg src={`/static/img/${img}`} />
+            <AllyImg src={img} />
         </AllyStyled>
     )
 }

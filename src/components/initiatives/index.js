@@ -16,7 +16,7 @@ const Initiative = ({index, img, text, name, supported, supporimg, margin = true
             </InitiativeBody>
             <InitiativeFooter>
                 <InitiativeSupported>
-                    <InitiativeSupportedImg src={`/static/img/${supporimg}`} alt='supported' />
+                    <InitiativeSupportedImg src={`http://localhost:8001${img}`} alt='supported' />
                     <InitiativeSupportedContent>
                         <InitiativeSupportedText>
                             Respaldado por:

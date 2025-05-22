@@ -2,35 +2,35 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import {
-  getGoals,
-  editGoal,
-  addGoal,
-  deleteGoal,
+  getInitiatives,
+  editInitiative,
+  addInitiative,
+  deleteInitiative,
   reloadState
-} from '../redux/reducers/goal'
+} from '../redux/reducers/initiative'
 
-export const useGoals = () => {
+export const useInitiatives = () => {
   const { list, loading, error, current, loaded } = useSelector(
-    state => state.goal
+    state => state.initiative
   )
   const dispatch = useDispatch()
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getGoals())
+      dispatch(getInitiatives())
     }
   }, [])
 
   const update = async (id, data) => {
-    return dispatch(editGoal(id, data))
+    return dispatch(editInitiative(id, data))
   }
 
   const create = async data => {
-    return dispatch(addGoal(data))
+    return dispatch(addInitiative(data))
   }
 
   const remove = async id => {
-    return dispatch(deleteGoal(id))
+    return dispatch(deleteInitiative(id))
   }
 
   const reload = async () => {

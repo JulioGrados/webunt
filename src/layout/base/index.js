@@ -30,7 +30,7 @@ export const Base = ({ current, currentMenu, children }) => {
         onCollapse={() => onCollapse(!collapsed)}
       >
         <BaseLogo>
-          <BaseLogoImg src='/static/img/logo_white.svg' />
+          <BaseLogoImg src={`/static/img/logo.png`} alt='logo' />
         </BaseLogo>
         <Menu
           theme='dark'
@@ -115,6 +115,14 @@ export const Base = ({ current, currentMenu, children }) => {
               <a>
                 <Icon type="aliwangwang" />
                 <span>Cuestionarios</span>
+              </a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item key='upload-list'>
+            <Link href='/administrador/archivos'>
+              <a>
+                <Icon type="upload" />
+                <span>Archivos</span>
               </a>
             </Link>
           </Menu.Item>

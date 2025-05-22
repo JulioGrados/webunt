@@ -1,3 +1,4 @@
+import { useGoals } from "../../hooks"
 import Goal from "../goal"
 import Title from "../title"
 import { GoalsList, GoalsSectionStyled } from "./styles"
@@ -26,13 +27,15 @@ const goals = [
 ]
 
 const GoalsSection = () => {
+    const { list } = useGoals({})
+    console.log('list', list)
     return (
         <GoalsSectionStyled>
             <Title text={'Metas cumplidas'} left={false} color={'#fff'} />
             <GoalsList>
                 {
-                    goals.map((goal, index) => (
-                        <Goal key={index} img={goal.img} number={goal.number} text={goal.text} index={index} />
+                    list.map((goal, index) => (
+                        <Goal key={index} img={goal.image} number={goal.number} description={goal.description} index={index} />
                     ))
                 }
             </GoalsList>

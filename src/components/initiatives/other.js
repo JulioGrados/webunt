@@ -4,7 +4,7 @@ import { CheckIcon } from "../icons/check"
 import { RocketIcon } from "../icons/rocket"
 import { InitiativeOtherBody, InitiativeButton, InitiativeFooter, InitiativeHeader, InitiativeHeaderImg, InitiativeHeaderNumber, InitiativeNameOther, InitiativeStyledPage, InitiativeSupported, InitiativeSupportedContent, InitiativeSupportedImg, InitiativeSupportedName, InitiativeSupportedText, InitiativeOtherText, InitiativeOtherBodyDiv } from "./styles"
 
-const InitiativeOther = ({index, img, text, name, supported, supporimg, margin = true, width=false}) => {
+const InitiativeOther = ({index, img, text, name, supported, supporimg, margin = true, width=false, char1, char2, char3, char4}) => {
     return (
         <InitiativeStyledPage margin={margin} width={width}>
             <InitiativeHeader>
@@ -13,34 +13,50 @@ const InitiativeOther = ({index, img, text, name, supported, supporimg, margin =
                 </InitiativeNameOther>
             </InitiativeHeader>
             <InitiativeOtherBody>
-                <InitiativeOtherBodyDiv>
-                    <CheckIcon />
-                    <InitiativeOtherText width={width}>
-                        {text}
-                    </InitiativeOtherText>
-                </InitiativeOtherBodyDiv>
-                <InitiativeOtherBodyDiv>
-                    <CheckIcon />
-                    <InitiativeOtherText width={width}>
-                        {text}
-                    </InitiativeOtherText>
-                </InitiativeOtherBodyDiv>
-                <InitiativeOtherBodyDiv>
-                    <CheckIcon />
-                    <InitiativeOtherText width={width}>
-                        {text}
-                    </InitiativeOtherText>
-                </InitiativeOtherBodyDiv>
-                <InitiativeOtherBodyDiv>
-                    <CheckIcon />
-                    <InitiativeOtherText width={width}>
-                        {text}
-                    </InitiativeOtherText>
-                </InitiativeOtherBodyDiv>
+                {
+                    char1 && (
+                        <InitiativeOtherBodyDiv>
+                            <CheckIcon />
+                            <InitiativeOtherText width={width}>
+                                {char1}
+                            </InitiativeOtherText>
+                        </InitiativeOtherBodyDiv>
+                    )
+                }
+                {
+                    char2 && (
+                        <InitiativeOtherBodyDiv>
+                            <CheckIcon />
+                            <InitiativeOtherText width={width}>
+                                {char2}
+                            </InitiativeOtherText>
+                        </InitiativeOtherBodyDiv>
+                    )
+                }
+                {
+                    char3 && (
+                        <InitiativeOtherBodyDiv>
+                            <CheckIcon />
+                            <InitiativeOtherText width={width}>
+                                {char3}
+                            </InitiativeOtherText>
+                        </InitiativeOtherBodyDiv>
+                    )
+                }
+                {
+                    char4 && (
+                        <InitiativeOtherBodyDiv>
+                            <CheckIcon />
+                            <InitiativeOtherText width={width}>
+                                {char4}
+                            </InitiativeOtherText>
+                        </InitiativeOtherBodyDiv>
+                    )
+                }
             </InitiativeOtherBody>
             <InitiativeFooter>
                 <InitiativeSupported>
-                    <InitiativeSupportedImg src={`/static/img/${supporimg}`} alt='supported' />
+                    <InitiativeSupportedImg src={`http://localhost:8001${supporimg}`} alt='supported' />
                     <InitiativeSupportedContent>
                         <InitiativeSupportedText>
                             Respaldado por:

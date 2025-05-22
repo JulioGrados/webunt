@@ -1,3 +1,4 @@
+import { useInitiatives } from "../../hooks"
 import { ArrowBetween } from "../arrowBetween"
 import { CycleIcon } from "../icons/cycle"
 import Initiative from "../initiatives"
@@ -28,19 +29,20 @@ const initiatives = [
     }
 ]
 const SectionInitiatives = () => {
+    const {list} = useInitiatives({})
     return (
         <SectionInitiativesStyled>
             <Title text={'Iniciativas para la sostenibilidad'} left={false} />
             <InitiativeContent>
                 <InitiativesList>
-                {initiatives.map((initiative, index) => (
+                {list.map((initiative, index) => (
                     <React.Fragment key={index}>
                     <Initiative
                         index={index}
                         name={initiative.name}
-                        img={initiative.img}
-                        supported={initiative.supported}
-                        text={initiative.text}
+                        img={initiative.backImage}
+                        supported={initiative.back}
+                        text={initiative.description}
                         supporimg={initiative.supporimg}
                     />
                     </React.Fragment>
