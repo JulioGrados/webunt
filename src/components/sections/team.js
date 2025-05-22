@@ -1,3 +1,4 @@
+import { useTeams } from "../../hooks"
 import Ally from "../ally"
 import { Team } from "../team"
 import Title from "../title"
@@ -37,13 +38,14 @@ const team = [
 ]
 
 const TeamSection = () => {
+    const {list} = useTeams({})
     return (
         <TeamSectionStyled>
             <Title text={'Nuestro equipo'} left={false} />
             <TeamList>
                 {
-                    team.map(item => (
-                        <Team img={item.img} name={item.name} rol={item.rol} />
+                    list.map(item => (
+                        <Team img={item.photo} name={item.names} rol={item.description} />
                     ))
                 }
             </TeamList>

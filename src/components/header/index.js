@@ -39,10 +39,10 @@ const Header = ({white = false}) => {
                                 Protafolio
                             </HeaderListItem>
                             <HeaderListItem white={white} href="/contactanos">
-                                Contactanos
+                                Contáctanos
                             </HeaderListItem>
                         </HeaderList>
-                        <HeaderButton>
+                        <HeaderButton href='/login'>
                             Iniciar Sesión
                         </HeaderButton>
                         <BurgerButton white={white} onClick={() => setMenuOpen(!menuOpen)}>

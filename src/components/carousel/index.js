@@ -1,6 +1,7 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import "./styles.css"
+import { useMentors } from "../../hooks"
 
 const mentors = [
     {
@@ -21,6 +22,7 @@ const mentors = [
 ]
 
 const CarruselAutoplay = () => {
+    const { list } = useMentors({})
     const [sliderRef] = useKeenSlider({
             breakpoints: {
             "(min-width: 400px)": {
@@ -68,17 +70,19 @@ const CarruselAutoplay = () => {
     )
     
     return (
-        <div ref={sliderRef} className="keen-slider carousel">
-            {
-                mentors.map(mentor => (
-                    <div className="keen-slider__slide number-slide">
-                        <img className="carousel_img" src={`/static/img/${mentor.img}`} />
-                        <h3 className="carousel_name">{mentor.name}</h3>
-                        <p className="carousel_text">{mentor.text}</p>
-                    </div>
-                ))
-            }
-        </div>
+        <>
+            {(list && list.length) &&(<div ref={sliderRef} className="keen-slider carousel">
+                {
+                    list.map(mentor => (
+                        <div className="keen-slider__slide number-slide">
+                            <img className="carousel_img" src={`http://localhost:8001${mentor.photo}`} />
+                            <h3 className="carousel_name">{mentor.names}</h3>
+                            <p className="carousel_text">{mentor.description}</p>
+                        </div>
+                    ))
+                }
+            </div>)}
+        </>
     )
 }
 

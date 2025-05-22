@@ -165,6 +165,7 @@ export const PortfolioSectionStyled = styled.ul`
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 `
 export const PortfolioItem = styled.li`
     border: 1px solid #F5F5F5;
