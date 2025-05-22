@@ -68,7 +68,7 @@ export const Logo = styled.a`
     align-self: left;
 `
 export const Image = styled.img`
-    width: 120px;
+    width: 200px;
 `
 export const Underline = styled.span`
     margin: 8px 0 12px 0;

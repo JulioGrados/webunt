@@ -58,7 +58,7 @@ const FormTemplate = ({ portfolio, loading, onSubmit, form, title }) => {
     <>
       <HeaderSection title={title}>
         <HeaderActions
-          path='/administrador/portafolios'
+          path='/administrador/portafolio'
           loading={loading}
           handleSubmit={handleSubmit}
           isSaveClean={!portfolio}
@@ -115,11 +115,21 @@ const FormTemplate = ({ portfolio, loading, onSubmit, form, title }) => {
                 {getFieldDecorator('level', {
                   rules: [
                     {
-                      message: 'Ingresa el level.'
+                      required: true,
+                      message: 'Ingresa el nivel.'
                     }
                   ],
-                  initialValue: data.level || undefined
-                })(<Input onChange={e => changeData('level', e.target.value)} />)}
+                  initialValue: data && data.level
+                })(
+                  <Select
+                    placeholder='Seleccione el nivel...'
+                    onChange={level => changeData('level', level)}
+                  >
+                    <Option value='Aceleración'>Aceleración</Option>
+                    <Option value='Incubación'>Incubación</Option>
+                    <Option value='Pre-incubación'>Pre-incubación</Option>
+                  </Select>
+                )}
               </Form.Item>
               <Form.Item label='Enlace'>
                 {getFieldDecorator('link', {

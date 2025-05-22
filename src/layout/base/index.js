@@ -54,11 +54,19 @@ export const Base = ({ current, currentMenu, children }) => {
               </a>
             </Link>
           </Menu.Item>
-          <Menu.Item key='page-list'>
-            <Link href='/administrador/paginas'>
+          <Menu.Item key='mentor-list'>
+            <Link href='/administrador/mentores'>
               <a>
-                <Icon type='shop' />
-                <span>Páginas</span>
+                <Icon type="smile" />
+                <span>Mentores</span>
+              </a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item key='team-list'>
+            <Link href='/administrador/equipo'>
+              <a>
+                <Icon type="apartment" />
+                <span>Equipo</span>
               </a>
             </Link>
           </Menu.Item>

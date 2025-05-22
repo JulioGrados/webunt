@@ -2,35 +2,35 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import {
-  getPortfolios,
-  editPortfolio,
-  addPortfolio,
-  deletePortfolio,
+  getMentors,
+  editMentor,
+  addMentor,
+  deleteMentor,
   reloadState
-} from '../redux/reducers/portfolio'
+} from '../redux/reducers/mentor'
 
-export const usePortfolio = () => {
+export const useMentors = () => {
   const { list, loading, error, current, loaded } = useSelector(
-    state => state.portfolio
+    state => state.mentor
   )
   const dispatch = useDispatch()
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getPortfolios())
+      dispatch(getMentors())
     }
   }, [])
 
   const update = async (id, data) => {
-    return dispatch(editPortfolio(id, data))
+    return dispatch(editMentor(id, data))
   }
 
   const create = async data => {
-    return dispatch(addPortfolio(data))
+    return dispatch(addMentor(data))
   }
 
   const remove = async id => {
-    return dispatch(deletePortfolio(id))
+    return dispatch(deleteMentor(id))
   }
 
   const reload = async () => {

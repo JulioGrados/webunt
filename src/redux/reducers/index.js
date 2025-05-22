@@ -9,6 +9,8 @@ import program from './program'
 import welcome from './welcome'
 import question from './question'
 import upload from './upload'
+import team from './team'
+import mentor from './mentor'
 
 export default {
   auth,
@@ -21,5 +23,7 @@ export default {
   program,
   welcome,
   question,
-  upload
+  upload,
+  team,
+  mentor
 }

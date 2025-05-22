@@ -1,3 +1,4 @@
+import { usePortfolio } from "../../hooks"
 import CarruselAutoplay from "../carousel"
 import Goal from "../goal"
 import { CheckIcon } from "../icons/check"
@@ -57,17 +58,18 @@ const portfolio = [
 ]
 
 const PortfolioSection = () => {
+    const { list } = usePortfolio({})
     return (
         <PortfolioSectionStyled>
             {
-                portfolio.map(item => (
+                list.map(item => (
                     <PortfolioItem>
                         <PortfolioItemFigure>
-                            <PortfolioItemImg src={`/static/img/${item.img}`} />
+                            <PortfolioItemImg src={`http://localhost:8001${item.image}`} />
                         </PortfolioItemFigure>
-                        <PortfolioItemTag>{item.tipo}</PortfolioItemTag>
+                        <PortfolioItemTag>{item.level}</PortfolioItemTag>
                         <PortfolioItemText>
-                            {item.text}
+                            {item.description}
                         </PortfolioItemText>
                         <PortfolioItemList>
                             <PortafolioItemli>
@@ -77,7 +79,7 @@ const PortfolioSection = () => {
                                         Fundación:
                                     </PortfolioItemliContentBold>
                                     <PortfolioItemliContentText>
-                                        {item.fundation}
+                                        {item.foundation}
                                     </PortfolioItemliContentText>
                                 </PortfolioItemliContent>
                             </PortafolioItemli>
@@ -99,12 +101,12 @@ const PortfolioSection = () => {
                                         Página web
                                     </PortfolioItemliContentBold>
                                     <PortfolioItemliContentText>
-                                        {item.url}
+                                        {item.link}
                                     </PortfolioItemliContentText>
                                 </PortfolioItemliContent>
                             </PortafolioItemli>
                         </PortfolioItemList>
-                        <PortfolioItemLink src={item.url} target="_blank">
+                        <PortfolioItemLink src={item.link} target="_blank">
                             Ir a la página web
                         </PortfolioItemLink>
                     </PortfolioItem>

@@ -68,7 +68,7 @@ const Footer = () => {
                         <FooterListItem>
                             <FooterListItemCircle />
                             <FooterListItemName>
-                                Contactanos
+                                Contáctanos
                             </FooterListItemName>
                         </FooterListItem>
                     </FooterList>

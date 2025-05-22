@@ -216,6 +216,11 @@ const FormTemplate = ({
                     </Select>
                   )}
                 </Form.Item>
+                <Form.Item label='Archivo'>
+                  {getFieldDecorator('file', {
+                    initialValue: user && user.file
+                  })(<Input />)}
+                </Form.Item>
             </FormRight>
           </FormSection>
         </Form>
