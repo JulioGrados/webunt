@@ -1,5 +1,6 @@
 import {
     listPortfolios,
+    listOpenPortfolios,
     createPortfolio,
     detailPortfolio,
     updatePortfolio,
@@ -28,6 +29,10 @@ import {
   const LOADING_GET_PORTFOLIOS = 'LOADING_GET_PORTFOLIOS'
   const SUCCESS_GET_PORTFOLIOS = 'SUCCESS_GET_PORTFOLIOS'
   const ERROR_GET_PORTFOLIOS = 'ERROR_GET_PORTFOLIOS'
+
+  const LOADING_GET_OPENPORTFOLIOS = 'LOADING_GET_OPENPORTFOLIOS'
+  const SUCCESS_GET_OPENPORTFOLIOS = 'SUCCESS_GET_OPENPORTFOLIOS'
+  const ERROR_GET_OPENPORTFOLIOS = 'ERROR_GET_OPENPORTFOLIOS'
   
   const LOADING_ADD_PORTFOLIO = 'LOADING_ADD_PORTFOLIO'
   const SUCCESS_ADD_PORTFOLIO = 'SUCCESS_ADD_PORTFOLIO'
@@ -58,6 +63,19 @@ import {
         return errorReducer(state, action.payload)
       }
       case SUCCESS_GET_PORTFOLIOS: {
+        return successReducer(state, {
+          list: action.payload,
+          loaded: true
+        })
+      }
+      // LIST OPEN
+      case LOADING_GET_OPENPORTFOLIOS: {
+        return loadingReducer(state)
+      }
+      case ERROR_GET_OPENPORTFOLIOS: {
+        return errorReducer(state, action.payload)
+      }
+      case SUCCESS_GET_OPENPORTFOLIOS: {
         return successReducer(state, {
           list: action.payload,
           loaded: true
@@ -130,6 +148,18 @@ import {
         ERROR_GET_PORTFOLIOS
       ],
       promise: () => listPortfolios(params),
+      ...extra
+    }
+  }
+
+  export const getOpenPortfolios = (params, extra = {}) => {
+    return {
+      types: [
+        LOADING_GET_OPENPORTFOLIOS,
+        SUCCESS_GET_OPENPORTFOLIOS,
+        ERROR_GET_OPENPORTFOLIOS
+      ],
+      promise: () => listOpenPortfolios(params),
       ...extra
     }
   }

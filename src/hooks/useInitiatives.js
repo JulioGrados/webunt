@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import {
   getInitiatives,
+  getOpenInitiatives,
   editInitiative,
   addInitiative,
   deleteInitiative,
@@ -17,7 +18,7 @@ export const useInitiatives = () => {
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getInitiatives())
+      dispatch(getOpenInitiatives())
     }
   }, [])
 

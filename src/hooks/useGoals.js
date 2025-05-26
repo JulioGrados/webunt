@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import {
   getGoals,
+  getOpenGoals,
   editGoal,
   addGoal,
   deleteGoal,
@@ -17,7 +18,7 @@ export const useGoals = () => {
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getGoals())
+      dispatch(getOpenGoals())
     }
   }, [])
 

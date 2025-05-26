@@ -6,7 +6,8 @@ import {
   editTeam,
   addTeam,
   deleteTeam,
-  reloadState
+  reloadState,
+  getOpenTeams
 } from '../redux/reducers/team'
 
 export const useTeams = () => {
@@ -17,7 +18,7 @@ export const useTeams = () => {
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getTeams())
+      dispatch(getOpenTeams())
     }
   }, [])
 

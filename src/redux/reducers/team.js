@@ -1,5 +1,6 @@
 import {
     listTeams,
+    listOpenTeams,
     createTeam,
     detailTeam,
     updateTeam,
@@ -28,6 +29,10 @@ import {
   const LOADING_GET_TEAMS = 'LOADING_GET_TEAMS'
   const SUCCESS_GET_TEAMS = 'SUCCESS_GET_TEAMS'
   const ERROR_GET_TEAMS = 'ERROR_GET_TEAMS'
+
+  const LOADING_GET_OPENTEAMS = 'LOADING_GET_OPENTEAMS'
+  const SUCCESS_GET_OPENTEAMS = 'SUCCESS_GET_OPENTEAMS'
+  const ERROR_GET_OPENTEAMS = 'ERROR_GET_OPENTEAMS'
   
   const LOADING_ADD_TEAM = 'LOADING_ADD_TEAM'
   const SUCCESS_ADD_TEAM = 'SUCCESS_ADD_TEAM'
@@ -58,6 +63,19 @@ import {
         return errorReducer(state, action.payload)
       }
       case SUCCESS_GET_TEAMS: {
+        return successReducer(state, {
+          list: action.payload,
+          loaded: true
+        })
+      }
+      // LIST OPEN
+      case LOADING_GET_OPENTEAMS: {
+        return loadingReducer(state)
+      }
+      case ERROR_GET_OPENTEAMS: {
+        return errorReducer(state, action.payload)
+      }
+      case SUCCESS_GET_OPENTEAMS: {
         return successReducer(state, {
           list: action.payload,
           loaded: true
@@ -130,6 +148,18 @@ import {
         ERROR_GET_TEAMS
       ],
       promise: () => listTeams(params),
+      ...extra
+    }
+  }
+
+  export const getOpenTeams = (params, extra = {}) => {
+    return {
+      types: [
+        LOADING_GET_TEAMS,
+        SUCCESS_GET_TEAMS,
+        ERROR_GET_TEAMS
+      ],
+      promise: () => listOpenTeams(params),
       ...extra
     }
   }

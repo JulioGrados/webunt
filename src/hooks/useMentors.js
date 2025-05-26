@@ -6,7 +6,8 @@ import {
   editMentor,
   addMentor,
   deleteMentor,
-  reloadState
+  reloadState,
+  getOpenMentors
 } from '../redux/reducers/mentor'
 
 export const useMentors = () => {
@@ -17,7 +18,7 @@ export const useMentors = () => {
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getMentors())
+      dispatch(getOpenMentors())
     }
   }, [])
 

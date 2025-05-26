@@ -1,5 +1,6 @@
 import {
     listPrograms,
+    listOpenPrograms,
     createProgram,
     detailProgram,
     updateProgram,
@@ -28,6 +29,10 @@ import {
   const LOADING_GET_PROGRAMS = 'LOADING_GET_PROGRAMS'
   const SUCCESS_GET_PROGRAMS = 'SUCCESS_GET_PROGRAMS'
   const ERROR_GET_PROGRAMS = 'ERROR_GET_PROGRAMS'
+  
+  const LOADING_GET_OPENPROGRAMS = 'LOADING_GET_OPENPROGRAMS'
+  const SUCCESS_GET_OPENPROGRAMS = 'SUCCESS_GET_OPENPROGRAMS'
+  const ERROR_GET_OPENPROGRAMS = 'ERROR_GET_OPENPROGRAMS'
   
   const LOADING_ADD_PROGRAM = 'LOADING_ADD_PROGRAM'
   const SUCCESS_ADD_PROGRAM = 'SUCCESS_ADD_PROGRAM'
@@ -58,6 +63,19 @@ import {
         return errorReducer(state, action.payload)
       }
       case SUCCESS_GET_PROGRAMS: {
+        return successReducer(state, {
+          list: action.payload,
+          loaded: true
+        })
+      }
+      // LIST OPEN
+      case LOADING_GET_OPENPROGRAMS: {
+        return loadingReducer(state)
+      }
+      case ERROR_GET_OPENPROGRAMS: {
+        return errorReducer(state, action.payload)
+      }
+      case SUCCESS_GET_OPENPROGRAMS: {
         return successReducer(state, {
           list: action.payload,
           loaded: true
@@ -130,6 +148,18 @@ import {
         ERROR_GET_PROGRAMS
       ],
       promise: () => listPrograms(params),
+      ...extra
+    }
+  }
+
+  export const getOpenPrograms = (params, extra = {}) => {
+    return {
+      types: [
+        LOADING_GET_OPENPROGRAMS,
+        SUCCESS_GET_OPENPROGRAMS,
+        ERROR_GET_OPENPROGRAMS
+      ],
+      promise: () => listOpenPrograms(params),
       ...extra
     }
   }

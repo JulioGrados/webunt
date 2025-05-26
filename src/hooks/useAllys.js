@@ -6,7 +6,8 @@ import {
   editAlly,
   addAlly,
   deleteAlly,
-  reloadState
+  reloadState,
+  getOpenAllys
 } from '../redux/reducers/ally'
 
 export const useAllys = () => {
@@ -17,7 +18,7 @@ export const useAllys = () => {
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getAllys())
+      dispatch(getOpenAllys())
     }
   }, [])
 

@@ -6,7 +6,8 @@ import {
   editPortfolio,
   addPortfolio,
   deletePortfolio,
-  reloadState
+  reloadState,
+  getOpenPortfolios
 } from '../redux/reducers/portfolio'
 
 export const usePortfolio = () => {
@@ -17,7 +18,7 @@ export const usePortfolio = () => {
 
   useEffect(() => {
     if (list.length === 0 && loading === false) {
-      dispatch(getPortfolios())
+      dispatch(getOpenPortfolios())
     }
   }, [])
 

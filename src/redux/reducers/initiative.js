@@ -1,5 +1,6 @@
 import {
     listInitiatives,
+    listOpenInitiatives,
     createInitiative,
     detailInitiative,
     updateInitiative,
@@ -28,6 +29,10 @@ import {
   const LOADING_GET_INITIATIVES = 'LOADING_GET_INITIATIVES'
   const SUCCESS_GET_INITIATIVES = 'SUCCESS_GET_INITIATIVES'
   const ERROR_GET_INITIATIVES = 'ERROR_GET_INITIATIVES'
+
+  const LOADING_GET_OPENINITIATIVES = 'LOADING_GET_OPENINITIATIVES'
+  const SUCCESS_GET_OPENINITIATIVES = 'SUCCESS_GET_OPENINITIATIVES'
+  const ERROR_GET_OPENINITIATIVES = 'ERROR_GET_OPENINITIATIVES'
   
   const LOADING_ADD_INITIATIVE = 'LOADING_ADD_INITIATIVE'
   const SUCCESS_ADD_INITIATIVE = 'SUCCESS_ADD_INITIATIVE'
@@ -58,6 +63,19 @@ import {
         return errorReducer(state, action.payload)
       }
       case SUCCESS_GET_INITIATIVES: {
+        return successReducer(state, {
+          list: action.payload,
+          loaded: true
+        })
+      }
+      // LIST OPEN
+      case LOADING_GET_OPENINITIATIVES: {
+        return loadingReducer(state)
+      }
+      case ERROR_GET_OPENINITIATIVES: {
+        return errorReducer(state, action.payload)
+      }
+      case SUCCESS_GET_OPENINITIATIVES: {
         return successReducer(state, {
           list: action.payload,
           loaded: true
@@ -130,6 +148,18 @@ import {
         ERROR_GET_INITIATIVES
       ],
       promise: () => listInitiatives(params),
+      ...extra
+    }
+  }
+
+  export const getOpenInitiatives = (params, extra = {}) => {
+    return {
+      types: [
+        LOADING_GET_OPENINITIATIVES,
+        SUCCESS_GET_OPENINITIATIVES,
+        ERROR_GET_OPENINITIATIVES
+      ],
+      promise: () => listOpenInitiatives(params),
       ...extra
     }
   }

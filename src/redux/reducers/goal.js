@@ -1,5 +1,6 @@
 import {
     listGoals,
+    listOpenGoals,
     createGoal,
     detailGoal,
     updateGoal,
@@ -28,6 +29,10 @@ import {
   const LOADING_GET_GOALS = 'LOADING_GET_GOALS'
   const SUCCESS_GET_GOALS = 'SUCCESS_GET_GOALS'
   const ERROR_GET_GOALS = 'ERROR_GET_GOALS'
+
+  const LOADING_GET_OPENGOALS = 'LOADING_GET_OPENGOALS'
+  const SUCCESS_GET_OPENGOALS = 'SUCCESS_GET_OPENGOALS'
+  const ERROR_GET_OPENGOALS = 'ERROR_GET_OPENGOALS'
   
   const LOADING_ADD_GOAL = 'LOADING_ADD_GOAL'
   const SUCCESS_ADD_GOAL = 'SUCCESS_ADD_GOAL'
@@ -58,6 +63,19 @@ import {
         return errorReducer(state, action.payload)
       }
       case SUCCESS_GET_GOALS: {
+        return successReducer(state, {
+          list: action.payload,
+          loaded: true
+        })
+      }
+      // LIST OPEN
+      case LOADING_GET_OPENGOALS: {
+        return loadingReducer(state)
+      }
+      case ERROR_GET_OPENGOALS: {
+        return errorReducer(state, action.payload)
+      }
+      case SUCCESS_GET_OPENGOALS: {
         return successReducer(state, {
           list: action.payload,
           loaded: true
@@ -130,6 +148,18 @@ import {
         ERROR_GET_GOALS
       ],
       promise: () => listGoals(params),
+      ...extra
+    }
+  }
+
+  export const getOpenGoals = (params, extra = {}) => {
+    return {
+      types: [
+        LOADING_GET_OPENGOALS,
+        SUCCESS_GET_OPENGOALS,
+        ERROR_GET_OPENGOALS
+      ],
+      promise: () => listOpenGoals(params),
       ...extra
     }
   }

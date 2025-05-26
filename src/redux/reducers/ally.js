@@ -1,5 +1,6 @@
 import {
     listAllys,
+    listOpenAllys,
     createAlly,
     detailAlly,
     updateAlly,
@@ -28,6 +29,10 @@ import {
   const LOADING_GET_ALLYS = 'LOADING_GET_ALLYS'
   const SUCCESS_GET_ALLYS = 'SUCCESS_GET_ALLYS'
   const ERROR_GET_ALLYS = 'ERROR_GET_ALLYS'
+
+  const LOADING_GET_OPENALLYS = 'LOADING_GET_OPENALLYS'
+  const SUCCESS_GET_OPENALLYS = 'SUCCESS_GET_OPENALLYS'
+  const ERROR_GET_OPENALLYS = 'ERROR_GET_OPENALLYS'
   
   const LOADING_ADD_ALLY = 'LOADING_ADD_ALLY'
   const SUCCESS_ADD_ALLY = 'SUCCESS_ADD_ALLY'
@@ -58,6 +63,19 @@ import {
         return errorReducer(state, action.payload)
       }
       case SUCCESS_GET_ALLYS: {
+        return successReducer(state, {
+          list: action.payload,
+          loaded: true
+        })
+      }
+      // LIST OPEN
+      case LOADING_GET_OPENALLYS: {
+        return loadingReducer(state)
+      }
+      case ERROR_GET_OPENALLYS: {
+        return errorReducer(state, action.payload)
+      }
+      case SUCCESS_GET_OPENALLYS: {
         return successReducer(state, {
           list: action.payload,
           loaded: true
@@ -130,6 +148,18 @@ import {
         ERROR_GET_ALLYS
       ],
       promise: () => listAllys(params),
+      ...extra
+    }
+  }
+
+  export const getOpenAllys = (params, extra = {}) => {
+    return {
+      types: [
+        LOADING_GET_OPENALLYS,
+        SUCCESS_GET_OPENALLYS,
+        ERROR_GET_OPENALLYS
+      ],
+      promise: () => listOpenAllys(params),
       ...extra
     }
   }

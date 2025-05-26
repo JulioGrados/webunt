@@ -5,7 +5,8 @@ import {
   editProgram,
   addProgram,
   deleteProgram,
-  reloadState
+  reloadState,
+  getOpenPrograms
 } from '../redux/reducers/program'
 
 export const usePrograms = () => {
@@ -13,7 +14,7 @@ export const usePrograms = () => {
   const dispatch = useDispatch()
     useEffect(() => {
       if (list.length === 0 && loading === false) {
-        dispatch(getPrograms())
+        dispatch(getOpenPrograms())
       }
     }, [])
 

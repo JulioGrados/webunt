@@ -1,5 +1,6 @@
 import {
     listMentors,
+    listOpenMentors,
     createMentor,
     detailMentor,
     updateMentor,
@@ -28,6 +29,10 @@ import {
   const LOADING_GET_MENTORS = 'LOADING_GET_MENTORS'
   const SUCCESS_GET_MENTORS = 'SUCCESS_GET_MENTORS'
   const ERROR_GET_MENTORS = 'ERROR_GET_MENTORS'
+
+  const LOADING_GET_OPENMENTORS = 'LOADING_GET_OPENMENTORS'
+  const SUCCESS_GET_OPENMENTORS = 'SUCCESS_GET_OPENMENTORS'
+  const ERROR_GET_OPENMENTORS = 'ERROR_GET_OPENMENTORS'
   
   const LOADING_ADD_MENTOR = 'LOADING_ADD_MENTOR'
   const SUCCESS_ADD_MENTOR = 'SUCCESS_ADD_MENTOR'
@@ -58,6 +63,19 @@ import {
         return errorReducer(state, action.payload)
       }
       case SUCCESS_GET_MENTORS: {
+        return successReducer(state, {
+          list: action.payload,
+          loaded: true
+        })
+      }
+      // LIST OPEN
+      case LOADING_GET_OPENMENTORS: {
+        return loadingReducer(state)
+      }
+      case ERROR_GET_OPENMENTORS: {
+        return errorReducer(state, action.payload)
+      }
+      case SUCCESS_GET_OPENMENTORS: {
         return successReducer(state, {
           list: action.payload,
           loaded: true
@@ -130,6 +148,18 @@ import {
         ERROR_GET_MENTORS
       ],
       promise: () => listMentors(params),
+      ...extra
+    }
+  }
+
+  export const getOpenMentors = (params, extra = {}) => {
+    return {
+      types: [
+        LOADING_GET_OPENMENTORS,
+        SUCCESS_GET_OPENMENTORS,
+        ERROR_GET_OPENMENTORS
+      ],
+      promise: () => listOpenMentors(params),
       ...extra
     }
   }
