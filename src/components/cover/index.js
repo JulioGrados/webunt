@@ -37,10 +37,10 @@ const Cover = () => {
                                 Fomentamos StartUps de Alto Impacto
                             </CoverTitle>
                             <CoverText>
-                                Nuestro objetivo es que más emprendedores de La Libertad y el Perú, encuentren el camino del éxito. 
+                                Nuestro propósito es impulsar a más emprendedores de La Libertad y del Perú a descubrir y recorrer el camino hacia el éxito.
                             </CoverText>
                             <CoverButtons>
-                                <CoverButtonOne href='/signup'>
+                                <CoverButtonOne href='/login'>
                                     Iniciar Sesión
                                 </CoverButtonOne>
                                 <CoverButtonTwo>
