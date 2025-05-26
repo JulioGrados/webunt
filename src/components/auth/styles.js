@@ -8,6 +8,18 @@ export const Grid = styled.div`
     flex-wrap: wrap;
     box-sizing: border-box;
 `
+export const RootCover = styled.div`
+    overflow: hidden;
+    position: relative;
+    max-height: 100vh;
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`
+
 export const Root = styled.div`
     overflow: hidden;
     position: relative;
@@ -15,7 +27,12 @@ export const Root = styled.div`
     flex-grow: 0;
     max-width: 50%;
     flex-basis: 50%;
+    @media (max-width: 768px) {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
 `
+
 export const Container = styled.div`
     height: 100%;
     margin: auto;

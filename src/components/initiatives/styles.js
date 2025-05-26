@@ -35,6 +35,8 @@ export const InitiativeStyledPage = styled.li`
     border-radius: 20px;
     padding: 20px;
     background-color: rgba(26, 115, 141, 0.06);
+    transition: all 0.3s ease;
+
     @media (max-width: 1024px) {
         width: 45%;
     }
@@ -42,6 +44,8 @@ export const InitiativeStyledPage = styled.li`
     @media (max-width: 768px) {
         width: 100%;
         max-width: 500px;
+        padding: 15px;
+        margin: 0 auto 20px auto;
     }
 `
 
@@ -80,12 +84,14 @@ export const InitiativeOtherBody = styled.div`
 export const InitiativeText = styled.p`
     margin: 0;
     font-size: ${props => props.width ? '16px' : '15px'};
-    line-height: ${props => props.width ? '25px' : '25px'};
+    line-height: ${props => props.width ? '25px' : '20px'};
+    width: calc(100% - 20px);
+    padding-left: 20px;
 
     @media (max-width: 768px) {
         font-size: 14px;
         line-height: 22px;
-        text-align: center;
+        padding-left: 10px;
     }
 `
 export const InitiativeOtherText = styled.p`
@@ -97,8 +103,14 @@ export const InitiativeOtherText = styled.p`
 `
 export const InitiativeOtherBodyDiv = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+        gap: 10px;
+    }
 `
 export const InitiativeName = styled.h3`
     margin: 0;
@@ -120,6 +132,12 @@ export const InitiativeNameOther = styled.h3`
     font-size: 26px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        font-size: 22px;
+        text-align: center;
+        margin-left: 0;
+    }
 `
 export const InitiativeFooter = styled.div`
     display: flex;
@@ -146,11 +164,19 @@ export const InitiativeSupportedText = styled.h5`
     text-align: left;
     font-size: 14px;
     font-weight: 600;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `
 export const InitiativeSupportedName = styled.p`
     margin: 0;
     font-size: 16px;
     text-align: left;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `
 export const InitiativeButton = styled.a`
     width: 135px;

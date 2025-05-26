@@ -3,7 +3,7 @@ import Router from 'next/router'
 
 import { useState } from 'react'
 
-import { Container, Cover, Footer, FormError, Grid, Image, LinkA, Register, Root, Title, Underline } from './styles'
+import { Container, Cover, Footer, FormError, Grid, Image, LinkA, Register, Root, Title, Underline, RootCover } from './styles'
 import { LoginFormUser } from './form'
 
 export const Login = () => {
@@ -25,9 +25,9 @@ export const Login = () => {
 
   return (
     <Grid>
-      <Root>
+      <RootCover>
         <Cover></Cover>
-      </Root>
+      </RootCover>
       <Root>
         <Container>
           <Image src={`/static/img/logo.png`} alt='logo' />

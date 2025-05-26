@@ -28,7 +28,7 @@ const ProgramsPageSection = () => {
             {
                 list.map((item, index) => (
                         (index % 2 !== 0) ? (
-                            <ProgramsPageItem>
+                            <ProgramsPageItem right>
                                 <ProgramPageContent right>
                                     <ProgramPageTitle>
                                         {item.name}

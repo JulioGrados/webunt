@@ -198,6 +198,10 @@ export const PortfolioSectionStyled = styled.ul`
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 export const PortfolioItem = styled.li`
     border: 1px solid #F5F5F5;
@@ -207,10 +211,12 @@ export const PortfolioItem = styled.li`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 330px;
+    width: 300px;
     height: 440px;
     justify-content: space-between;
     margin-bottom: 30px;
+    min-width: 280px;
+    max-width: 100%;
 `
 export const PortfolioItemFigure = styled.div`
     width: 280px;
@@ -241,6 +247,8 @@ export const PortfolioItemText = styled.div`
     font-size: 13px;
     line-height: 22px;
     overflow: hidden;
+    min-width: 240px;
+    max-width: 100%;
 `
 export const PortfolioItemList = styled.ul`
     padding-top: 5px;
@@ -294,7 +302,7 @@ export const ProgramsPageItem = styled.li`
     width: 100%;
     margin-bottom: 100px;
     @media (max-width: 768px) {
-        flex-direction: column;
+        flex-direction: ${props => props.right ? 'column' : 'column-reverse'};;
         text-align: center;
         margin-bottom: 60px;
     }
@@ -393,6 +401,14 @@ export const SectionInitiativesPageStyled = styled.ul`
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 `
 export const SectionContactStyled = styled.div`
     display: flex;
@@ -404,12 +420,20 @@ export const SectionContactList = styled.ul`
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 `
 export const SectionContactItem = styled.li`
     width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `
 export const SectionContactItemCircle = styled.div`
     width: 80px;
