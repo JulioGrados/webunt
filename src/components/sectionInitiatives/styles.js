@@ -1,13 +1,5 @@
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
-const rotateArrow = keyframes`
-    from {
-        transform: translate(-50%, -50%) rotate(0deg); /* Rotación inicial */
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg); /* Rotación completa */
-    }
-`
 export const SectionInitiativesStyled = styled.div`
     width: 100%;
     padding: 80px 0;
@@ -23,13 +15,38 @@ export const SectionInitiativesStyled = styled.div`
 export const InitiativesList = styled.ul`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
     margin-top: 50px;
 
+    @media (min-width: 769px) {
+        // Para pantallas grandes, ajustamos posición manual por item
+        & > *:nth-child(1) {
+            flex: 1 1 45%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        & > *:nth-child(2) {
+            flex: 1 1 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        & > *:nth-child(3) {
+            flex: 1 1 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+    }
+
     @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
         gap: 1.5rem;
         margin-top: 40px;
     }

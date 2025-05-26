@@ -148,6 +148,9 @@ export const HeaderButton = styled.a`
       height: 34px;
       font-size: 13px;
     }
+    @media (max-width: 425px) {
+      display: none;
+    }
 `
 
 /* DITT */

@@ -1,8 +1,7 @@
 import { Container } from "../../styles/main"
 import Header from "../header"
-import { LowIcon } from "../icons/low"
 import { useRef, useEffect } from 'react'
-import { BackgroundVideo, Content, CoverButtonOne, CoverButtons, CoverButtonTwo, CoverCircle, CoverContent, CoverImg1, CoverImg2, CoverImg3, CoverStyled, CoverText, CoverTitle, CoverWelcome, Main, Overlay } from "./styles"
+import { BackgroundVideo, Content, CoverButtonOne, CoverButtons, CoverButtonTwo, CoverContent, CoverStyled, CoverText, CoverTitle, Main, Overlay } from "./styles"
 
 const Cover = () => {
     const videoRef = useRef(null);
@@ -25,7 +24,6 @@ const Cover = () => {
                 playsinline
             >
                 <source src={`/static/img/home.mp4`} type="video/mp4" />
-                
             </BackgroundVideo>
             <Overlay />
             <Content>

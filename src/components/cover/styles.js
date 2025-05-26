@@ -19,6 +19,7 @@ export const BackgroundVideo = styled.video`
 export const CoverStyled = styled.div`
     position: relative;
     height: 100vh;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,18 +80,45 @@ export const CoverTitle = styled.h1`
     text-transform: uppercase;
     color: #fff;
     margin: 0;
+    @media (max-width: 1024px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 28px;
+    }
 `
 export const CoverText = styled.p`
     margin: 20px 0 40px 0;
     font-size: 30px;
     font-weight: 600;
     color: #fff;
+    @media (max-width: 1024px) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        margin: 15px 0 30px 0;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
 `
 export const CoverButtons = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
 `
 export const CoverButtonOne = styled.a`
     width: 180px;
@@ -102,6 +130,7 @@ export const CoverButtonOne = styled.a`
     line-height: 50px;
     color: #fff;
     background-color: #1A738D;
+    transition: transform 0.3s ease;
     &:hover {
         color: #fff;
         transform: scale(1.1);
@@ -118,10 +147,14 @@ export const CoverButtonTwo = styled.a`
     border: 2px solid #fff;
     color: #fff;
     margin-left: 30px;
+    transition: transform 0.3s ease;
     &:hover {
         color: #1A738D;
         background: #fff;
         transform: scale(1.1);
+    }
+    @media (max-width: 480px) {
+        margin-left: 0px;
     }
 `
 export const CoverImg1 = styled.img`

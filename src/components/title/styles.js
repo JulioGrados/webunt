@@ -1,11 +1,23 @@
 import styled from 'styled-components'
 export const TitleStyled = styled.h1`
-    font-size: 50px;
+    font-size: clamp(28px, 6vw, 50px); 
     font-weight: 700;
     margin: 0;
     text-align: ${props => (props.left ? 'left' : 'center')};
-    line-height: 55px;
+    line-height: 1.1;
     color: ${props => (props.color ? '#fff' : '#000')};
+
+    @media (max-width: 1024px) {
+        font-size: 42px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 28px;
+    }
 `
 export const LineStyled = styled.hr`
     width: 80px;

@@ -11,7 +11,7 @@ export const Section = styled.section`
 
 export const Card = styled.div`
   flex: 1 1 30%;
-  min-width: 300px;
+  min-width: 250px;
   height: 500px;
   position: relative;
   background-image: url(${props => props.bg});

@@ -163,8 +163,4 @@ export const InitiativeButton = styled.a`
     font-weight: 600;
     background-color: #1A738D;
     margin-top: 10px;
-
-    @media (max-width: 768px) {
-    width: 100%;
-    }
 `

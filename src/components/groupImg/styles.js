@@ -21,22 +21,26 @@ export const GroupImageStyles = styled.div`
     width: 412px;
     height: 100%;
     z-index: -1;
+    @media (max-width: 768px) {
+        width: 100%;
+        align-items: center;
+    }
 `
 export const GroupImg1 = styled.img`
-    width: 300px;
+    max-width: 250px;
     height: 200px;
     object-fit: cover;
     border-radius: 4px;
     animation: ${spin}  2s forwards;
 `
 export const GroupImg2 = styled.img`
-    width: 240px;
+    max-width: 250px;
     height: 140px;
     border-radius: 4px;
     animation: ${spin}  2s forwards;
 `
 export const GroupImg3 = styled.img`
-    width: 300px;
+    max-width: 250px;
     height: 200px;
     margin-top: -55px;
     border-radius: 4px;

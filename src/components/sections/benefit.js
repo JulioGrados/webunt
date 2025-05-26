@@ -3,7 +3,7 @@ import GroupImage from "../groupImg"
 import { CheckIcon } from "../icons/check"
 import { Program } from "../program"
 import Title from "../title"
-import { ProgramContent, ProgramRecatangle, ProgramsSectionStyled, UsBenefitContent, UsSectionContent, UsSectionContentItem, UsSectionContentItemText, UsSectionContentItemTextBold, UsBenefitContentList, UsSectionContentText, UsSectionStyled, UsSectionContentButton } from "./styles"
+import { ProgramContent, ProgramRecatangle, ProgramsSectionStyled, UsBenefitStyled, UsBenefitContent, UsSectionContent, UsSectionContentItem, UsSectionContentItemText, UsSectionContentItemTextBold, UsBenefitContentList, UsSectionContentText, UsSectionStyled, UsSectionContentButton } from "./styles"
 
 const programs = [
     {
@@ -25,7 +25,7 @@ const programs = [
 
 const BenefitSection = () => {
     return (
-        <UsSectionStyled>
+        <UsBenefitStyled>
             <UsBenefitContent>
                 <Title text={'Beneficios de nuestra incubadora'} left={true} />
                 <UsBenefitContentList>
@@ -65,8 +65,7 @@ const BenefitSection = () => {
                 </UsSectionContentButton>
             </UsBenefitContent>
             <GroupImageBenefit img1={`/static/img/IMG_1.jpg`} img2={`/static/img/IMG_3.jpg`} img3={`/static/img/IMG_4.jpg`} img4={`/static/img/IMG_2.jpg`} />
-            {/* <GroupImageBenefit img1={`/static/img/IMG_1.jpg`} img2={`/static/img/IMG_3.jpg`} img3={`/static/img/IMG_4.jpg`} img4={`/static/img/IMG_2.jpg`} /> */}
-        </UsSectionStyled>
+        </UsBenefitStyled>
     )
 }
 

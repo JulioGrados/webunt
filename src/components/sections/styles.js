@@ -27,10 +27,8 @@ export const GoalsList = styled.ul`
     @media (max-width: 768px) {
         gap: 1.5rem;
         margin-top: 40px;
-    }
-
-    @media (max-width: 480px) {
-        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
     }
 `
 export const MentorsSectionStyled = styled.div`
@@ -91,14 +89,48 @@ export const UsSectionStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px 0;
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        padding: 20px 0;
+    }
 `
+
+export const UsBenefitStyled = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px 0;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+`
+
+
 export const UsSectionContent = styled.div`
     width: calc(100% - 412px);
     padding-left: 50px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px;
+    }
 `
 export const UsBenefitContent = styled.div`
     width: calc(100% - 412px);
     padding-right: 50px;
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px;
+    }
+
 `
 export const UsSectionContentText = styled.p`
     font-size: 16px;
@@ -261,6 +293,11 @@ export const ProgramsPageItem = styled.li`
     justify-content: space-between;
     width: 100%;
     margin-bottom: 100px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 60px;
+    }
 `
 export const ProgramsPageFigure = styled.div`
     position: relative;
@@ -270,6 +307,13 @@ export const ProgramsPageImg = styled.img`
     width: 397px;
     height: 270px;
     border-radius: 15px;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
 `
 export const ProgramsPageLogo = styled.div`
     position: absolute;
@@ -284,6 +328,10 @@ export const ProgramsPageLogo = styled.div`
     align-items: center; /* Centra verticalmente */
     padding: 10px;
     border-radius: 15px;
+    @media (max-width: 768px) {
+        bottom: -10px;
+        right: -10px;
+    }
 `
 export const ProgramsPageLogoImg = styled.img`
     width: 54px;
@@ -294,6 +342,10 @@ export const ProgramPageContent = styled.div`
     text-align: left;
     padding-left: ${props => props.right ? '0px' : '80px'};
     padding-right: ${props => props.right ? '80px' : '0px'};
+    @media (max-width: 768px) {
+        padding: 20px 0;
+        text-align: center;
+    }
 `
 export const ProgramPageTitle = styled.h3`
     font-size: 50px;
@@ -301,6 +353,13 @@ export const ProgramPageTitle = styled.h3`
     text-align: left;
     font-weight: 600;
     color: #000;
+    @media (max-width: 768px) {
+        font-size: 32px; 
+    }
+
+    @media (max-width: 480px) {
+        font-size: 26px;
+    }
 `
 export const ProgramPageText = styled.p`
     font-size: 18px;
@@ -308,6 +367,10 @@ export const ProgramPageText = styled.p`
     margin: 20px 0 30px 0;
     text-align: left;
     color: #000;
+    @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 26px;
+    }
 `
 export const ProgramPageButton = styled.a`
     display: inline-block;
