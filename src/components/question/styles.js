@@ -8,6 +8,11 @@ export const QuestionStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    @media (max-width: 768px) {
+      padding: 20px 10px;
+      height: auto;
+    }
 `
 
 export const QuestionControl = styled.div`
@@ -16,6 +21,10 @@ export const QuestionControl = styled.div`
     background-color: #fff;
     width: 100%;
     display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      overflow-y: auto;
+    }
 `
 
 export const Container = styled.div`
@@ -24,6 +33,10 @@ export const Container = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftSection = styled.div`
@@ -34,6 +47,12 @@ export const LeftSection = styled.div`
   justify-content: center;
   text-align: center;
   padding:  0px 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+    order: 1;
+  }
 `;
 
 export const RightSection = styled.div`
@@ -45,6 +64,12 @@ export const RightSection = styled.div`
   align-items: center;
   background: white;
   padding: 0 40px 0 80px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+    order: 2;
+  }
 `;
 
 export const QuestionBox = styled.div`
@@ -56,6 +81,11 @@ export const QuestionBox = styled.div`
 
 export const QuestionText = styled.h2`
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
 `;
 
 export const ErrorText = styled.p`
@@ -72,6 +102,11 @@ export const Input = styled.input`
   margin-top: 10px;
   margin-bottom: 20px;
   border: 0px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px;
+  }
 `;
 
 export const Button = styled.button`
@@ -81,6 +116,12 @@ export const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
 `;
 
 export const ProgressContainer = styled.div`
@@ -93,6 +134,10 @@ export const ProgressContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const CircleContainer = styled.div`
@@ -102,6 +147,11 @@ export const CircleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const Circle = styled.div`
@@ -119,6 +169,13 @@ export const Circle = styled.div`
   z-index: 1;
   color: ${({ active, completed }) =>
     completed ? "#1A738D" : active ? "#000000" : "#CCCCCC"};
+  
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    border-width: 10px;
+  }
 `;
 
 export const ActiveBorder = styled.div`
@@ -128,6 +185,11 @@ export const ActiveBorder = styled.div`
   border-radius: 50%;
   border: 3px solid #1A738D;
   z-index: 3;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const ProgressBorder = styled.div`
@@ -136,6 +198,11 @@ export const ProgressBorder = styled.div`
   height: 62px;
   border-radius: 50%;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const CircleQuarter = styled.div`

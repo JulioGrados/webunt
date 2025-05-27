@@ -10,6 +10,9 @@ export const UploadControl = styled.div`
     margin: 30px auto;
     padding: 0px 30px;
     background-color: #fff;
+    @media (max-width: 768px) {
+        padding: 0 16px;
+    }
 `
 
 export const UploadContainer = styled.div`
@@ -42,23 +45,24 @@ export const UploadFiles = styled.div`
     flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 export const UploadContainerFile = styled.div`
-border: 1px dashed #98B0B7;
-border-radius: 10px;
-padding: 20px;
-text-align: center;
-position: relative;
-cursor: pointer;
-background-color: ${(props) => (props.hasFile ? "#e3f5fa" : "transparent")};
-transition: background-color 0.3s ease;
-width: 33%;
-margin-bottom: 15px;
-width: 100%;
-&:hover {
-  background-color: ${(props) =>
-    props.hasFile ? "#d3eef6" : "#f7fafd"};
-}
+    border: 1px dashed #98B0B7;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background-color: ${(props) => (props.hasFile ? "#e3f5fa" : "transparent")};
+    transition: background-color 0.3s ease;
+    width: 100%;
+
+    &:hover {
+        background-color: ${(props) => props.hasFile ? "#d3eef6" : "#f7fafd"};
+    }
 `;
 
 // Input de tipo file oculto
@@ -87,13 +91,16 @@ export const UploadFilesButton = styled.button`
     line-height: 40px;
     cursor: pointer;
     box-sizing: border-box;
-    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
     font-weight: 500;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     border: none;
     margin: 0 auto;
+
+    @media (max-width: 480px) {
+    font-size: 12px;
+    }
 `
 
 export const UploadFilesItem = styled.div`
@@ -101,4 +108,7 @@ export const UploadFilesItem = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `

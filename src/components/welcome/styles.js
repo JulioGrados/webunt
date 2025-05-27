@@ -20,13 +20,17 @@ export const WelcomeControl = styled.div`
 `
 
 export const WelcomeContainer = styled.div`
-    padding: 30px;
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     text-align: center;
+
+    @media (max-width: 768px) {
+        /* padding: 20px; */
+    }
 `
 
 export const WelcomeTitle = styled.h3`
@@ -34,6 +38,10 @@ export const WelcomeTitle = styled.h3`
     font-size: 30px;
     color: #1A738D;
     font-weight: 600;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
 `
 
 export const WelcomeText = styled.p`
@@ -41,10 +49,18 @@ export const WelcomeText = styled.p`
     font-size: 16px;
     color: #000;
     width: 60%;
+    @media (max-width: 768px) {
+        width: 90%;
+        font-size: 14px;
+    }
 `
 
 export const WelcomeForm = styled.div`
     width: 60%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 export const WelcomeFormItem = styled.div`
@@ -57,12 +73,17 @@ export const WelcomeFormLabel = styled.label`
     text-align: center;
     margin: 0 0 15px 0;
     display: block;
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 `
 
 // Contenedor principal
 export const TabsContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 10px;
 `;
 
@@ -78,9 +99,16 @@ export const Tab = styled.label`
   background-color: ${(props) => (props.selected ? "#1a738d" : "white")};
   color: ${(props) => (props.selected ? "white" : "#1a738d")};
   transition: all 0.3s ease;
-    width: 24%;
+  width: 45%;
+
   &:hover {
     background-color: ${(props) => (props.selected ? "#1a738d" : "#e3f5fa")};
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
   }
 `;
 
@@ -110,6 +138,11 @@ export const StyledSelect = styled.select`
     outline: none;
     border-color: #1a738d;
     box-shadow: 0 0 5px rgba(26, 115, 141, 0.5);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding: 12px;
   }
 `;
 
@@ -145,4 +178,10 @@ export const WelcomeFormButton = styled.button`
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     border: none;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        font-size: 13px;
+        height: 40px;
+    }
 `
