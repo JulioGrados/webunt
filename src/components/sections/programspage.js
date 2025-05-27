@@ -37,7 +37,7 @@ const ProgramsPageSection = () => {
                                         {item.description}
                                     </ProgramPageText>
                                     <ProgramPageButton href='/contactanos'>
-                                        Contactanos
+                                        Contáctanos
                                     </ProgramPageButton>
                                 </ProgramPageContent>
                                 <ProgramsPageFigure>
@@ -63,7 +63,7 @@ const ProgramsPageSection = () => {
                                         {item.description}
                                     </ProgramPageText>
                                     <ProgramPageButton href='/contactanos'>
-                                        Contactanos
+                                        Contáctanos
                                     </ProgramPageButton>
                                 </ProgramPageContent>
                             </ProgramsPageItem>

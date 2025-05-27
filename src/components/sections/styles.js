@@ -177,6 +177,10 @@ export const UsSectionContentButton = styled.a`
     background-color: #1A738D;
     display: inline-block;
     border-radius: 22px;
+    &:hover {
+        color: #fff;
+        transform: scale(1.1);
+    }
 `
 export const TeamSectionStyled = styled.div`
     display: flex;

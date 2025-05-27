@@ -30,8 +30,8 @@ const UsSection = () => {
                         </UsSectionContentItemText>
                     </UsSectionContentItem>
                 </UsSectionContentList>
-                <UsSectionContentButton>
-                    Contactanos
+                <UsSectionContentButton href='/contactanos'>
+                    Contáctanos
                 </UsSectionContentButton>
             </UsSectionContent>
         </UsSectionStyled>
