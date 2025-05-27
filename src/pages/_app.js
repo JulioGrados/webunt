@@ -6,18 +6,21 @@ import Head from 'next/head'
 import { GlobalStyle } from '../styles/GlobalStyle'
 
 import { getCookie } from 'utils/functions/session'
-
+import { useRouter } from 'next/router'
 import 'antd/dist/antd.min.css'
 
 const MyApp = ({ Component, pageProps, store }) => {
-  // const admin = Treasurer()
-  // const ComponentToRender = admin ? Component : LoginPage
-  // console.log('admin', admin)
+  const router = useRouter();
+  const currentUrl = `https://www.incubaunt.com${router.asPath}`;
   return (
     <Provider store={store}>
       <Head>
-        <title>INCUBAUNT</title>
-        <link rel='shortcut icon' href='/static/img/favicon.png' />
+        <meta property="og:title" content="INCUBAUNT" />
+        <meta name="og:description" content="Nuestro propósito es impulsar a más emprendedores de La Libertad y del Perú a descubrir y recorrer el camino hacia el éxito." />
+        <meta property="og:image" content="../../public/static/img/home.jpg" />
+        <meta property="og:image:alt" content="INCUBAUNT" />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:type" content="website" />
       </Head>
       <Component {...pageProps} />
       <GlobalStyle />
