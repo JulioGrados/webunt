@@ -26,7 +26,7 @@ const UnitSection = () => {
           <Card key={index} bg={'http://localhost:8001' + card.image}>
             <Overlay />
             <Content>
-              <Title>Incuba {card.name}</Title>
+              <Title>{card.name}</Title>
               <Description>{card.text}</Description>
               <Button href='/programas'>Conoce más</Button>
             </Content>

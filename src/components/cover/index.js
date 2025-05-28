@@ -42,7 +42,7 @@ const Cover = () => {
                                     Iniciar Sesión
                                 </CoverButtonOne>
                                 <CoverButtonTwo>
-                                    Contactanos
+                                    Contáctanos
                                 </CoverButtonTwo>
                             </CoverButtons>
                         </CoverContent>

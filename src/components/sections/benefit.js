@@ -64,7 +64,7 @@ const BenefitSection = () => {
                     Contactanos
                 </UsSectionContentButton>
             </UsBenefitContent>
-            <GroupImageBenefit img1={`/static/img/IMG_1.jpg`} img2={`/static/img/IMG_3.jpg`} img3={`/static/img/IMG_4.jpg`} img4={`/static/img/IMG_2.jpg`} />
+            <GroupImageBenefit img1={`/static/img/home2.jpg`} img2={`/static/img/team5.jpg`} img3={`/static/img/IMG_4.jpg`} img4={`/static/img/IMG_2.jpg`} />
         </UsBenefitStyled>
     )
 }
