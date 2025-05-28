@@ -363,20 +363,20 @@ export const addOrEditUser = user => {
   }
 }
 
-export const moveLead = (soruce, index, destination, newIndex) => (
-  dispach,
-  getState
-) => {
-  const state = getState()
-  const list = state.user.list
+// export const moveLead = (soruce, index, destination, newIndex) => (
+//   dispach,
+//   getState
+// ) => {
+//   const state = getState()
+//   const list = state.user.list
 
-  const newList = moveItem(list, soruce, index, destination, newIndex)
+//   const newList = moveItem(list, soruce, index, destination, newIndex)
 
-  dispach({
-    type: SUCCESS_UPDATE_USERS,
-    payload: newList
-  })
-}
+//   dispach({
+//     type: SUCCESS_UPDATE_USERS,
+//     payload: newList
+//   })
+// }
 
 export const reloadState = () => {
   return {

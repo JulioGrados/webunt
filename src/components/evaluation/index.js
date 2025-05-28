@@ -16,7 +16,7 @@ const Evaluation = ({}) => {
             Router.push('/')
         }
     }, [loggedUser && loggedUser.rol])
-
+    console.log('users', users)
     const handleChange = (event) => {
         setUser(event.target.value)
         const data = event.target.value

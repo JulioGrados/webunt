@@ -3,7 +3,7 @@ import { NavBarDropDownContent } from './styles'
 
 import Router from 'next/router'
 
-const menu = handleLogout => {
+const menu = (handleLogout, user) => {
   return (
     <Menu>
       <Menu.Item>
@@ -14,22 +14,44 @@ const menu = handleLogout => {
           Editar perfil
         </a>
       </Menu.Item>
-      <Menu.Item>
-        <a
-          rel='noopener noreferrer'
-          href='/subir-archivos'
-        >
-          Subir archivos
-        </a>
-      </Menu.Item>
-      <Menu.Item>
-        <a
-          rel='noopener noreferrer'
-          href='/resultados'
-        >
-          Resultados
-        </a>
-      </Menu.Item>
+      {
+        user && user.rol === 'emprendedor' && (
+          <Menu.Item>
+            <a
+              rel='noopener noreferrer'
+              href='/subir-archivos'
+            >
+              Subir archivos
+            </a>
+          </Menu.Item>
+        )
+      }
+
+      {
+        user && user.rol === 'emprendedor' && (
+          <Menu.Item>
+            <a
+              rel='noopener noreferrer'
+              href='/resultados'
+            >
+              Resultados
+            </a>
+          </Menu.Item>
+        )
+      }
+
+{
+        user && user.rol === 'exterior' && (
+          <Menu.Item>
+            <a
+              rel='noopener noreferrer'
+              href='/evaluaciones'
+            >
+              Evaluaciones
+            </a>
+          </Menu.Item>
+        )
+      }
       <Menu.Item>
         <a onClick={handleLogout} rel='noopener noreferrer'>
           Cerrar sesión
@@ -45,7 +67,7 @@ export const DropDown = ({ handleLogout, user }) => {
   }
   
   return (
-    <Dropdown overlay={menu(handleLogout,handleProfile)}>
+    <Dropdown overlay={menu(handleLogout, user)}>
       <NavBarDropDownContent className='ant-dropdown-link' href='#'>
         {user && user.names} <Icon type='down' />
       </NavBarDropDownContent>
