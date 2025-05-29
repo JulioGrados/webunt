@@ -234,21 +234,22 @@ export const PortfolioItemImg = styled.img`
     max-height: 79px;
 `
 export const PortfolioItemTag = styled.div`
-    width: 103px;
-    height: 21px;
+    width: 150px;
+    height: 30px;
     background-color: rgba(26, 115, 141, .5);
     text-align: center;
-    line-height: 21px;
+    line-height: 30px;
     font-size: 12px;
     font-weight: 500;
     color: #1A738D;
     margin: 15px 0 8px 0;
     border-radius: 15px;
+    font-size: 14px;
 `
 export const PortfolioItemText = styled.div`
     width: 280px;
     height: 66px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 22px;
     overflow: hidden;
     min-width: 240px;

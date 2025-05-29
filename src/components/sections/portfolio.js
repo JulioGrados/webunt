@@ -71,7 +71,7 @@ const PortfolioSection = () => {
                         <PortfolioItemText>
                             {item.description}
                         </PortfolioItemText>
-                        <PortfolioItemList>
+                        {/* <PortfolioItemList>
                             <PortafolioItemli>
                                 <CheckSmallIcon />
                                 <PortfolioItemliContent>
@@ -105,7 +105,7 @@ const PortfolioSection = () => {
                                     </PortfolioItemliContentText>
                                 </PortfolioItemliContent>
                             </PortafolioItemli>
-                        </PortfolioItemList>
+                        </PortfolioItemList> */}
                         <PortfolioItemLink src={item.link} target="_blank">
                             Ir a la página web
                         </PortfolioItemLink>

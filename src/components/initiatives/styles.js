@@ -86,12 +86,10 @@ export const InitiativeText = styled.p`
     font-size: ${props => props.width ? '16px' : '15px'};
     line-height: ${props => props.width ? '25px' : '20px'};
     width: calc(100% - 20px);
-    padding-left: 20px;
 
     @media (max-width: 768px) {
         font-size: 14px;
         line-height: 22px;
-        padding-left: 10px;
     }
 `
 export const InitiativeOtherText = styled.p`
@@ -151,7 +149,7 @@ export const InitiativeSupported = styled.div`
 export const InitiativeSupportedImg = styled.img`
     width: 45px;
     height: 45px;
-    object-fit: cover;
+    object-fit: scale-down;
 `
 export const InitiativeSupportedContent = styled.div`
     display: flex;
