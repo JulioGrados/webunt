@@ -42,7 +42,7 @@ const TestimoniesSection = () => {
             <TestimoniesList>
                 {
                     list.map(item => (
-                        <Ally img={'http://localhost:8001' + item.image} />
+                        <Ally img={'https://api.incubaunt.com' + item.image} />
                     ))
                 }
             </TestimoniesList>

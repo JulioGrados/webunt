@@ -60,7 +60,7 @@ export const UploadImage = ({ url, image, handleChange, id = '' }) => {
       {!loading ? (
         url && !image ? (
           <img
-            src={'http://localhost:8001' + url}
+            src={'https://api.incubaunt.com' + url}
             width='100'
             height='100'
             alt='image'
