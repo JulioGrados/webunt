@@ -41,18 +41,18 @@ const ProgramsPageSection = () => {
                                     </ProgramPageButton>
                                 </ProgramPageContent>
                                 <ProgramsPageFigure>
-                                    <ProgramsPageImg src={'https://api.incubaunt.com' + item.image} alt="img"/>
+                                    <ProgramsPageImg src={'http://localhost:8001' + item.image} alt="img"/>
                                     <ProgramsPageLogo>
-                                        <ProgramsPageLogoImg src={'https://api.incubaunt.com' + item.logo}  />
+                                        <ProgramsPageLogoImg src={'http://localhost:8001' + item.logo}  />
                                     </ProgramsPageLogo>
                                 </ProgramsPageFigure>
                             </ProgramsPageItem>
                         ) : (
                             <ProgramsPageItem>
                                 <ProgramsPageFigure>
-                                    <ProgramsPageImg src={'https://api.incubaunt.com' + item.image} alt="img"/>
+                                    <ProgramsPageImg src={'http://localhost:8001' + item.image} alt="img"/>
                                     <ProgramsPageLogo>
-                                        <ProgramsPageLogoImg src={'https://api.incubaunt.com' + item.logo}  />
+                                        <ProgramsPageLogoImg src={'http://localhost:8001' + item.logo}  />
                                     </ProgramsPageLogo>
                                 </ProgramsPageFigure>
                                 <ProgramPageContent>

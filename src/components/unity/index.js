@@ -23,7 +23,7 @@ const UnitSection = () => {
     return (
       <Section>
         {list.map((card, index) => (
-          <Card key={index} bg={'https://api.incubaunt.com' + card.image}>
+          <Card key={index} bg={'http://localhost:8001' + card.image}>
             <Overlay />
             <Content>
               <Title>{card.name}</Title>

@@ -36,7 +36,7 @@ const EditMentor = ({ role }) => {
 
   const handleSubmit = (data, redirect, callback) => {
     const urlRedirect = redirect
-      ? '/administrador/aliados' : ''
+      ? '/administrador/mentores' : ''
     updateMentor(current._id, data, urlRedirect, callback)
     router.push(urlRedirect)
   }
@@ -44,7 +44,7 @@ const EditMentor = ({ role }) => {
   return (
     <MentorForm
       {...mentorState}
-      title={`Editar aliado`}
+      title={`Editar mentor`}
       mentor={current}
       onSubmit={handleSubmit}
     />

@@ -56,7 +56,7 @@ const InitiativeOther = ({index, img, text, name, supported, supporimg, margin =
             </InitiativeOtherBody>
             <InitiativeFooter>
                 <InitiativeSupported>
-                    <InitiativeSupportedImg src={`https://api.incubaunt.com${supporimg}`} alt='supported' />
+                    <InitiativeSupportedImg src={`http://localhost:8001${supporimg}`} alt='supported' />
                     <InitiativeSupportedContent>
                         <InitiativeSupportedText>
                             Respaldado por:

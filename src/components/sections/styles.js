@@ -248,7 +248,7 @@ export const PortfolioItemTag = styled.div`
 `
 export const PortfolioItemText = styled.div`
     width: 280px;
-    height: 66px;
+    height: 100px;
     font-size: 15px;
     line-height: 22px;
     overflow: hidden;

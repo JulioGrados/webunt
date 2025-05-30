@@ -65,7 +65,7 @@ const PortfolioSection = () => {
                 list.map(item => (
                     <PortfolioItem>
                         <PortfolioItemFigure>
-                            <PortfolioItemImg src={`https://api.incubaunt.com${item.image}`} />
+                            <PortfolioItemImg src={`http://localhost:8001${item.image}`} />
                         </PortfolioItemFigure>
                         <PortfolioItemTag>{item.level}</PortfolioItemTag>
                         <PortfolioItemText>
