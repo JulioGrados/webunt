@@ -5,7 +5,7 @@ export const TitleStyled = styled.h1`
     margin: 0;
     text-align: ${props => (props.left ? 'left' : 'center')};
     line-height: 1.1;
-    color: ${props => (props.color ? '#fff' : '#000')};
+    color: ${props => (props.color ? '#fff' : '#032539')};
 
     @media (max-width: 1024px) {
         font-size: 42px;

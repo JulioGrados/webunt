@@ -40,7 +40,7 @@ const menu = (handleLogout, user) => {
         )
       }
 
-{
+      {
         user && user.rol === 'exterior' && (
           <Menu.Item>
             <a
@@ -48,6 +48,18 @@ const menu = (handleLogout, user) => {
               href='/evaluaciones'
             >
               Evaluaciones
+            </a>
+          </Menu.Item>
+        )
+      }
+      {
+        user && user.rol === 'administrador' && (
+          <Menu.Item>
+            <a
+              rel='noopener noreferrer'
+              href='/administrador'
+            >
+              Administrador
             </a>
           </Menu.Item>
         )

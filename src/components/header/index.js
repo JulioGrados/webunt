@@ -13,9 +13,14 @@ import {
     SideMenuItem,
     HeaderVersion
 } from "./styles"
+import { useSession } from "../../hooks";
+import { NavbarContainer, NavbarImg, NavbarUser } from "./admin/styles";
+import { DropDown } from "./admin/dropdown";
 
 const Header = ({white = false}) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { loggedUser, logout } = useSession()
+    console.log('loggedUser', loggedUser)
     return (
         <>
             <HeaderStyled white={white}>
@@ -41,9 +46,21 @@ const Header = ({white = false}) => {
                                 Contáctanos
                             </HeaderListItem>
                         </HeaderList>
-                        <HeaderButton href='/login'>
-                            Iniciar Sesión
-                        </HeaderButton>
+                        {
+                            loggedUser ? (
+                                <NavbarContainer>
+                                    <NavbarUser>
+                                        <NavbarImg>{loggedUser && loggedUser.names && loggedUser.names.charAt(0)}</NavbarImg>
+                                        {loggedUser && loggedUser.username}
+                                        <DropDown handleLogout={logout} user={loggedUser} />
+                                    </NavbarUser>
+                                </NavbarContainer>
+                            ) : (
+                                <HeaderButton href='/login'>
+                                    Iniciar Sesión
+                                </HeaderButton>
+                            )
+                        }
                         <BurgerButton white={white} onClick={() => setMenuOpen(!menuOpen)}>
                             <span />
                             <span />

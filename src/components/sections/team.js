@@ -44,8 +44,8 @@ const TeamSection = () => {
             <Title text={'Nuestro equipo'} left={false} />
             <TeamList>
                 {
-                    list.map(item => (
-                        <Team img={item.photo} name={item.names} rol={item.description} />
+                    list.map((item, index) => (
+                        <Team img={item.photo} name={item.names} rol={item.description} index={index} />
                     ))
                 }
             </TeamList>

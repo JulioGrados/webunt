@@ -1,11 +1,13 @@
-import { TeamImg, TeamName, TeamRol, TeamStyled } from "./styles"
+import { Card, Photo, Info, Name, Rol } from "./styles"
 
-export const Team = ({img, name, rol}) => {
+export const Team = ({img, name, rol, index}) => {
     return (
-        <TeamStyled>
-            <TeamImg src={`http://localhost:8001${img}`} alt={'tem'}/>
-            <TeamName>{name}</TeamName>
-            <TeamRol>{rol}</TeamRol>
-        </TeamStyled>
+        <Card key={index}>
+            <Photo src={`http://localhost:8001${img}`} alt={'tem'} />
+            <Info>
+            <Name>{name}</Name>
+            <Rol>{rol}</Rol>
+            </Info>
+        </Card>
     )
 }

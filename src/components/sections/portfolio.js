@@ -59,6 +59,7 @@ const portfolio = [
 
 const PortfolioSection = () => {
     const { list } = usePortfolio({})
+    console.log(list)
     return (
         <PortfolioSectionStyled>
             {
@@ -106,7 +107,7 @@ const PortfolioSection = () => {
                                 </PortfolioItemliContent>
                             </PortafolioItemli>
                         </PortfolioItemList> */}
-                        <PortfolioItemLink src={item.link} target="_blank">
+                        <PortfolioItemLink href={item.link} target="_blank">
                             Ir a la página web
                         </PortfolioItemLink>
                     </PortfolioItem>

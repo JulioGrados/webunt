@@ -1,6 +1,7 @@
 import SectionContent from '../components/content'
 import Cover from '../components/cover'
 import CoverOther from '../components/cover/others'
+import Crew from '../components/crew'
 import Footer from '../components/footer'
 import GroupImage from '../components/groupImg'
 import HeadPage from '../components/head'

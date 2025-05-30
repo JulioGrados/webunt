@@ -190,11 +190,10 @@ export const TeamSectionStyled = styled.div`
     width: 100%;
 `
 export const TeamList = styled.ul`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+    gap: 2rem;
+    margin-top: 50px;
 `
 export const PortfolioSectionStyled = styled.ul`
     display: flex;
