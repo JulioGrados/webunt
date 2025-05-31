@@ -403,7 +403,7 @@ export const ProgramPageButton = styled.a`
 export const SectionInitiativesPageStyled = styled.ul`
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch; 
     width: 100%;
     flex-wrap: wrap;
     gap: 30px;

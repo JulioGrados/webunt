@@ -37,10 +37,10 @@ const Header = ({white = false}) => {
                                 Programas
                             </HeaderListItem>
                             <HeaderListItem white={white} href="/iniciativas">
-                                iniciativas
+                                Iniciativas
                             </HeaderListItem>
                             <HeaderListItem white={white} href="/portafolio">
-                                Protafolio
+                                Portafolio
                             </HeaderListItem>
                             <HeaderListItem white={white} href="/contactanos">
                                 Contáctanos

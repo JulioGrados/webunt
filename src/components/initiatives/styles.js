@@ -28,6 +28,7 @@ export const InitiativeStyled = styled.li`
 export const InitiativeStyledPage = styled.li`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: ${props => props.width ? '30%' : '400px'};
     min-width: 280px;
     max-width: 100%;

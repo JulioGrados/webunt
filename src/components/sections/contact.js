@@ -23,7 +23,7 @@ export const SectionContact = () => {
                     <SectionContactItemContent>
                         <SectionContactItemContentName>Email:</SectionContactItemContentName>
                         <SectionContactItemContentText>cayala@unitru.edu.pe</SectionContactItemContentText>
-                        <SectionContactItemContentText>cpalaciosc@unitru.edu.pe</SectionContactItemContentText>
+                        <SectionContactItemContentText>yhuacanjulca@unitru.edu.pe</SectionContactItemContentText>
                     </SectionContactItemContent>
                 </SectionContactItem>
                 <SectionContactItem>
@@ -32,8 +32,8 @@ export const SectionContact = () => {
                     </SectionContactItemCircle>
                     <SectionContactItemContent>
                         <SectionContactItemContentName>Teléfonos:</SectionContactItemContentName>
-                        <SectionContactItemContentText>+51 964 546 532</SectionContactItemContentText>
-                        <SectionContactItemContentText>+51 992 730 940</SectionContactItemContentText>
+                        <SectionContactItemContentText>+51 946 220 854</SectionContactItemContentText>
+                        <SectionContactItemContentText>+51 985 616 955</SectionContactItemContentText>
                     </SectionContactItemContent>
                 </SectionContactItem>
             </SectionContactList>

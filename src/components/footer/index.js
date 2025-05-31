@@ -32,7 +32,7 @@ const Footer = () => {
             <FooterRight>
                 <FooterRightItem>
                     <FooterTitle>
-                        Visitanos
+                        Visítanos
                     </FooterTitle>
                     <FooterList>
                         <FooterListItem>
@@ -122,7 +122,10 @@ const Footer = () => {
                                     Llamanos:
                                 </FooterListItemSubtitle>
                                 <FooterListItemName>
-                                    (044) 209020
+                                    (+51) 946220854
+                                </FooterListItemName>
+                                <FooterListItemName>
+                                    (+51) 985616955
                                 </FooterListItemName>
                             </FooterListItemContent>
                         </FooterListItem>
