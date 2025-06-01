@@ -26,7 +26,7 @@ export const UploadImage = ({ url, image, handleChange, id = '' }) => {
     if (info.file.status === 'uploading') {
       return setLoading(true)
     }
-    console.log('info.file.originFileObj', info.file.originFileObj)
+    console.log('info.file', info.file)
     if (info.file.status === 'done') {
       getBase64(info.file.originFileObj, url => {
         setImage(url)
