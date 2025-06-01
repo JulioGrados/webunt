@@ -18,8 +18,9 @@ export const UploadImage = ({ url, image, handleChange, id = '' }) => {
     const isImage = file.type.match(imageType)
     if (!isImage) {
       message.error('You can only upload JPG or PNG file!')
+      return false;
     }
-    return isImage
+    return false;
   }
 
   const handleChangeImage = info => {
@@ -53,9 +54,14 @@ export const UploadImage = ({ url, image, handleChange, id = '' }) => {
       listType='picture-card'
       className='avatar-uploader'
       showUploadList={false}
-      // action='https://www.mocky.io/v2/5cc8019d300000980a055e76'
       beforeUpload={beforeUpload}
       onChange={handleChangeImage}
+      customRequest={({ file, onSuccess, onError }) => {
+        // Simula un upload exitoso (si no subes realmente a servidor)
+        setTimeout(() => {
+          onSuccess("ok"); // Esto evita que file.status = 'error'
+        }, 0);
+      }}
     >
       {!loading ? (
         url && !image ? (
