@@ -18,9 +18,8 @@ export const UploadImage = ({ url, image, handleChange, id = '' }) => {
     const isImage = file.type.match(imageType)
     if (!isImage) {
       message.error('You can only upload JPG or PNG file!')
-      return false;
     }
-    return false;
+    return isImage
   }
 
   const handleChangeImage = info => {
