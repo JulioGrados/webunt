@@ -90,7 +90,7 @@ export const Base = ({ current, currentMenu, children }) => {
             <Link href='/administrador/iniciativas'>
               <a>
                 <Icon type="schedule" />
-                <span>iniciativas</span>
+                <span>Iniciativas</span>
               </a>
             </Link>
           </Menu.Item>

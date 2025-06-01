@@ -47,7 +47,7 @@ const Header = ({white = false}) => {
                             </HeaderListItem>
                         </HeaderList>
                         {
-                            loggedUser ? (
+                            loggedUser ? loggedUser.names && (
                                 <NavbarContainer>
                                     <NavbarUser>
                                         <NavbarImg>{loggedUser && loggedUser.names && loggedUser.names.charAt(0)}</NavbarImg>
