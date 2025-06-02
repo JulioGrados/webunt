@@ -39,7 +39,7 @@ export const useTeams = () => {
   }
 
   return {
-    list: list.reverse(),
+    list,
     loading,
     update,
     create,
