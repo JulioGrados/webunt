@@ -15,7 +15,7 @@ const UsUnt = () => {
     return (
         <>
             <HeadPage title={'INCUBAUNT - Contáctanos'} description={'¡Formando startups de alto impacto!. Visita a detalle nuestra página web y nuestras redes sociales.'} />
-            <CoverOther title={'Contáctanos'} />
+            <CoverOther title={ 'Contáctanos' } />
             <Section>
                 <Container>
                     <SectionItem>
