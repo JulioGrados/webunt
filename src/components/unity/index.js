@@ -1,5 +1,6 @@
 import { usePrograms } from "../../hooks";
 import { Section, Card, Overlay, Content, Title, Description, Button } from "./styles"
+import { MEDIA_PATH } from 'utils/files/path'
 const cards = [
     {
       title: 'Incuba Innova',
@@ -23,7 +24,7 @@ const UnitSection = () => {
     return (
       <Section>
         {list.map((card, index) => (
-          <Card key={index} bg={'http://localhost:8001' + card.image}>
+          <Card key={index} bg={MEDIA_PATH + card.image}>
             <Overlay />
             <Content>
               <Title>{card.name}</Title>

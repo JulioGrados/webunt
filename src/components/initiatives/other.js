@@ -3,7 +3,7 @@ import { ChartIcon } from "../icons/chart"
 import { CheckIcon } from "../icons/check"
 import { RocketIcon } from "../icons/rocket"
 import { InitiativeOtherBody, InitiativeButton, InitiativeFooter, InitiativeHeader, InitiativeHeaderImg, InitiativeHeaderNumber, InitiativeNameOther, InitiativeStyledPage, InitiativeSupported, InitiativeSupportedContent, InitiativeSupportedImg, InitiativeSupportedName, InitiativeSupportedText, InitiativeOtherText, InitiativeOtherBodyDiv } from "./styles"
-
+import { MEDIA_PATH } from 'utils/files/path'
 const InitiativeOther = ({index, img, text, name, supported, supporimg, margin = true, width=false, char1, char2, char3, char4}) => {
     return (
         <InitiativeStyledPage margin={margin} width={width}>
@@ -56,7 +56,7 @@ const InitiativeOther = ({index, img, text, name, supported, supporimg, margin =
             </InitiativeOtherBody>
             <InitiativeFooter>
                 <InitiativeSupported>
-                    <InitiativeSupportedImg src={`http://localhost:8001${supporimg}`} alt='supported' />
+                    <InitiativeSupportedImg src={`${MEDIA_PATH}${supporimg}`} alt='supported' />
                     <InitiativeSupportedContent>
                         <InitiativeSupportedText>
                             Respaldado por:

@@ -2,7 +2,7 @@ import { usePrograms } from "../../hooks"
 import { Program } from "../program"
 import Title from "../title"
 import { ProgramContent, ProgramPageButton, ProgramPageContent, ProgramPageText, ProgramPageTitle, ProgramRecatangle, ProgramsPageFigure, ProgramsPageImg, ProgramsPageItem, ProgramsPageLogo, ProgramsPageLogoImg, ProgramsPageSectionStyled } from "./styles"
-
+import { MEDIA_PATH } from 'utils/files/path'
 const programs = [
     {
         name: 'Innova',
@@ -41,18 +41,18 @@ const ProgramsPageSection = () => {
                                     </ProgramPageButton>
                                 </ProgramPageContent>
                                 <ProgramsPageFigure>
-                                    <ProgramsPageImg src={'http://localhost:8001' + item.image} alt="img"/>
+                                    <ProgramsPageImg src={MEDIA_PATH + item.image} alt="img"/>
                                     <ProgramsPageLogo>
-                                        <ProgramsPageLogoImg src={'http://localhost:8001' + item.logo}  />
+                                        <ProgramsPageLogoImg src={MEDIA_PATH + item.logo}  />
                                     </ProgramsPageLogo>
                                 </ProgramsPageFigure>
                             </ProgramsPageItem>
                         ) : (
                             <ProgramsPageItem>
                                 <ProgramsPageFigure>
-                                    <ProgramsPageImg src={'http://localhost:8001' + item.image} alt="img"/>
+                                    <ProgramsPageImg src={MEDIA_PATH + item.image} alt="img"/>
                                     <ProgramsPageLogo>
-                                        <ProgramsPageLogoImg src={'http://localhost:8001' + item.logo}  />
+                                        <ProgramsPageLogoImg src={MEDIA_PATH + item.logo}  />
                                     </ProgramsPageLogo>
                                 </ProgramsPageFigure>
                                 <ProgramPageContent>

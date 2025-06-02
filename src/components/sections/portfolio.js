@@ -5,7 +5,7 @@ import { CheckIcon } from "../icons/check"
 import { CheckSmallIcon } from "../icons/checksmall"
 import Title from "../title"
 import { GoalsList, PortafolioItemli, PortfolioItem, PortfolioItemFigure, PortfolioItemImg, PortfolioItemliContent, PortfolioItemliContentBold, PortfolioItemliContentText, PortfolioItemLink, PortfolioItemList, PortfolioItemTag, PortfolioItemText, PortfolioSectionStyled } from "./styles"
-
+import { MEDIA_PATH } from 'utils/files/path'
 const portfolio = [
     {
         img: 'portfolio1.avif',
@@ -66,7 +66,7 @@ const PortfolioSection = () => {
                 list.map(item => (
                     <PortfolioItem>
                         <PortfolioItemFigure>
-                            <PortfolioItemImg src={`http://localhost:8001${item.image}`} />
+                            <PortfolioItemImg src={`${MEDIA_PATH}${item.image}`} />
                         </PortfolioItemFigure>
                         <PortfolioItemTag>{item.level}</PortfolioItemTag>
                         <PortfolioItemText>

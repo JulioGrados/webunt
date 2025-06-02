@@ -2,7 +2,7 @@ import { useAllys } from "../../hooks"
 import Ally from "../ally"
 import Title from "../title"
 import { TestimoniesList, TestimoniesSectionStyled } from "./styles"
-
+import { MEDIA_PATH } from 'utils/files/path'
 const testimonies = [
     {
         img: 'aliado1.png'
@@ -42,7 +42,7 @@ const TestimoniesSection = () => {
             <TestimoniesList>
                 {
                     list.map(item => (
-                        <Ally img={'http://localhost:8001' + item.image} />
+                        <Ally img={MEDIA_PATH + item.image} />
                     ))
                 }
             </TestimoniesList>

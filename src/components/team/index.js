@@ -1,9 +1,9 @@
 import { Card, Photo, Info, Name, Rol } from "./styles"
-
+import { MEDIA_PATH } from 'utils/files/path'
 export const Team = ({img, name, rol, index}) => {
     return (
         <Card key={index}>
-            <Photo src={`http://localhost:8001${img}`} alt={'tem'} />
+            <Photo src={`${MEDIA_PATH}${img}`} alt={'tem'} />
             <Info>
             <Name>{name}</Name>
             <Rol>{rol}</Rol>

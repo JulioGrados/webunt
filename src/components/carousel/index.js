@@ -2,7 +2,7 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import "./styles.css"
 import { useMentors } from "../../hooks"
-
+import { MEDIA_PATH } from 'utils/files/path'
 const mentors = [
     {
         img: 'mentor1.jpeg',
@@ -75,7 +75,7 @@ const CarruselAutoplay = () => {
                 {
                     list.map(mentor => (
                         <div className="keen-slider__slide number-slide">
-                            <img className="carousel_img" src={`http://localhost:8001${mentor.photo}`} />
+                            <img className="carousel_img" src={`${MEDIA_PATH}${mentor.photo}`} />
                             <h3 className="carousel_name">{mentor.names}</h3>
                             <p className="carousel_text">{mentor.description}</p>
                         </div>
