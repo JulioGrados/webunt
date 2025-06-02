@@ -4,8 +4,8 @@
   "description": "Web de DITT e incuba UNT",
   "main": "server.js",
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next -p 3003",
-    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' next -p 3003",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
     "start": "next start -p 3003"
   },
   "repository": {
