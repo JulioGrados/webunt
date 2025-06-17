@@ -75,7 +75,6 @@ export default function HypothesisChangeForm({evaluation}) {
         position: position,
         experiment: experiment,
         process: 'Testing',
-        user: loggedUser._id,
         color: color[countSegmentos]
       }))
       const resp = await update(evaluation._id, formData)
@@ -96,7 +95,6 @@ export default function HypothesisChangeForm({evaluation}) {
           position: position,
           experiment: experiment,
           process: 'Testing',
-          user: loggedUser._id,
           parent: segment
         }))
         const resp = await update(evaluation._id, formData)
