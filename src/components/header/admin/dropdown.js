@@ -4,6 +4,7 @@ import { NavBarDropDownContent } from './styles'
 import Router from 'next/router'
 
 const menu = (handleLogout, user) => {
+  console.log('user', user)
   return (
     <Menu>
       <Menu.Item>
@@ -14,21 +15,9 @@ const menu = (handleLogout, user) => {
           Editar perfil
         </a>
       </Menu.Item>
-      {
-        user && user.rol === 'emprendedor' && (
-          <Menu.Item>
-            <a
-              rel='noopener noreferrer'
-              href='/subir-archivos'
-            >
-              Subir archivos
-            </a>
-          </Menu.Item>
-        )
-      }
 
       {
-        user && user.rol === 'emprendedor' && (
+        user && user.rol === 'externo' && (
           <Menu.Item>
             <a
               rel='noopener noreferrer'
@@ -41,7 +30,20 @@ const menu = (handleLogout, user) => {
       }
 
       {
-        user && user.rol === 'exterior' && (
+        user && user.rol === 'administrador' && (
+          <Menu.Item>
+            <a
+              rel='noopener noreferrer'
+              href='/resultados'
+            >
+              Resultados
+            </a>
+          </Menu.Item>
+        )
+      }
+
+      {
+        user && user.rol === 'emprendedor' && (
           <Menu.Item>
             <a
               rel='noopener noreferrer'

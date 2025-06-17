@@ -119,7 +119,7 @@ const Question = ({}) => {
             })
 
             if(resp.success) {
-                Router.push('/subir-archivos')
+                Router.push('/evaluaciones')
             }
             return;
         }
@@ -142,10 +142,10 @@ const Question = ({}) => {
         if(current && current._id) {
             console.log('current question', current)
             if (current.rol === 'externo') {
-                Router.push('/evaluaciones')
+                Router.push('/resultados')
             }
             if(current.question) {
-                Router.push('/resultados')
+                Router.push('/evaluaciones')
             }
         }
     }, [current && current._id])

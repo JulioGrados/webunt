@@ -21,8 +21,8 @@ export const SignupFormUser = ({handleSuccess, handleError}) => {
         ruc: '',
         rol: ''
     })
-    console.log('values', values)
-    console.log('option', option)
+    // console.log('values', values)
+    // console.log('option', option)
     return (
         <div>
             {

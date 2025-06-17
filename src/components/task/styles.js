@@ -12,6 +12,7 @@ export const TaskCard = styled.div`
   padding: 1rem;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
 `;
 
 export const Header = styled.div`
@@ -31,7 +32,7 @@ export const Header = styled.div`
 //   animation: ${wave} 3s infinite linear;
 // `;
 
-export const TaskTitle = styled.div`
+export const TaskTitle = styled.a`
   font-size: 1rem;
   font-weight: 500;
   color: #333;

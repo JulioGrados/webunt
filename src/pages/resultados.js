@@ -11,11 +11,11 @@ import { useSession } from '../hooks'
 const ResultPage = () => {
   const { loggedUser, logout } = useSession()
   return (
-    <IncomePage>
+    <>
       <HeadPage title={'IncubaUNT - Resultados'} description={'Resultados'} />
       <HeaderSign  user={loggedUser} handleLogout={logout} />
       <Result />
-    </IncomePage>
+    </>
   )
 }
 

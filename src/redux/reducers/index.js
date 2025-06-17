@@ -11,6 +11,9 @@ import question from './question'
 import upload from './upload'
 import team from './team'
 import mentor from './mentor'
+import evaluation from './evaluation'
+import interview from './interview'
+import comment from './comment'
 
 export default {
   auth,
@@ -25,5 +28,8 @@ export default {
   question,
   upload,
   team,
-  mentor
+  mentor,
+  evaluation,
+  interview,
+  comment
 }

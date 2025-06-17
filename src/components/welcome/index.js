@@ -42,10 +42,10 @@ const Welcome = ({}) => {
     useEffect(() => {
         if(current && current._id) {
             if (current.rol === 'externo') {
-                Router.push('/evaluaciones')
+                Router.push('/resultados')
             }
             if(current.welcome && current.question){
-                Router.push('/resultados')
+                Router.push('/evaluaciones')
             } else if(current.welcome) {
                 Router.push('/cuestionario')
             }

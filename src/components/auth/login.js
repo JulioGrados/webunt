@@ -10,13 +10,7 @@ export const Login = () => {
   const [error, setError] = useState('')
 
   const handleSucces = (user) => {
-    if(user.rol && user.rol === 'emprendedor') {
-      Router.push('/resultados')
-    } else if (user.rol && user.rol === 'emprendedor') {
-      Router.push('/evaluaciones') 
-    } else {
-      Router.push('/')
-    }
+    Router.push('/')
   }
 
   const handleError = (warning) => {
