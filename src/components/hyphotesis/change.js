@@ -78,7 +78,7 @@ export default function HypothesisChangeForm({evaluation}) {
         user: loggedUser._id,
         color: color[countSegmentos]
       }))
-      const resp = await create(evaluation._id, formData)
+      const resp = await update(evaluation._id, formData)
       if(resp.success) {
         router.push('/evaluaciones')
       } else {
