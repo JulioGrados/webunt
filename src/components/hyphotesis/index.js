@@ -66,7 +66,7 @@ export default function HypothesisForm() {
       const countSegmentos = list.filter(item => item.position === 'Segmentos de Clientes').length || 0;
       const formData = new window.FormData()
       if (file) {
-        formData.append('file', file.originFileObj)
+        formData.append('file', file)
       }
       formData.append('data', JSON.stringify({
         title: title,

@@ -68,7 +68,7 @@ export default function HypothesisChangeForm({evaluation}) {
       const countSegmentos = list.filter(item => item.position === 'Segmentos de Clientes').length || 0;
       const formData = new window.FormData()
       if (file) {
-        formData.append('file', file.originFileObj)
+        formData.append('file', file)
       }
       formData.append('data', JSON.stringify({
         title: title,
@@ -78,7 +78,7 @@ export default function HypothesisChangeForm({evaluation}) {
         user: loggedUser._id,
         color: color[countSegmentos]
       }))
-      const resp = await create(formData)
+      const resp = await create(evaluation._id, formData)
       if(resp.success) {
         router.push('/evaluaciones')
       } else {
