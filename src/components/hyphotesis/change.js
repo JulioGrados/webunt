@@ -171,7 +171,7 @@ export default function HypothesisChangeForm({evaluation}) {
             />
             {
                 evaluation && evaluation.file && (
-                    <Url target='_blank' href={`${MEDIA_PATH}${evaluation.file}`}>
+                    <Url style={{display: 'block'}} target='_blank' href={`${MEDIA_PATH}${evaluation.file}`}>
                         {`${MEDIA_PATH}${evaluation.file}`}
                     </Url>
                 )
