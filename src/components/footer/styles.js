@@ -101,7 +101,7 @@ export const FooterTitle = styled.h3`
 export const FooterList = styled.ul`
     margin-top: 15px;
 `
-export const FooterListItem = styled.li`
+export const FooterListItem = styled.a`
     display: flex;
     align-items: center;
     margin-bottom: 10px;
