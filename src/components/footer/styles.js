@@ -57,7 +57,7 @@ export const FooterSocial = styled.ul`
         flex-wrap: wrap;
     }
 `
-export const FooterSocialItem = styled.li`
+export const FooterSocialItem = styled.a`
     width: 40px;
     height: 40px;
     border-radius: 50%;

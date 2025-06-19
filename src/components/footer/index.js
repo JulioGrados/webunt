@@ -15,16 +15,13 @@ const Footer = () => {
                     ¡Formando startups de alto impacto!. Visita a detalle nuestra página web y nuestras redes sociales.
                 </FooterText>
                 <FooterSocial>
-                    <FooterSocialItem>
+                    <FooterSocialItem href="https://www.facebook.com/incubaunt.peru" target="_blank">
                         <FacebookIcon />
                     </FooterSocialItem>
-                    <FooterSocialItem>
-                        <TwitterIcon />
-                    </FooterSocialItem>
-                    <FooterSocialItem>
+                    <FooterSocialItem href="https://pe.linkedin.com/company/incubauntperu" target="_blank">
                         <LinkedinIcon />
                     </FooterSocialItem>
-                    <FooterSocialItem>
+                    <FooterSocialItem href="https://www.instagram.com/incubaunt" target="_blank">
                         <InstagramIcon />
                     </FooterSocialItem>
                 </FooterSocial>

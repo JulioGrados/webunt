@@ -24,9 +24,9 @@ const TaskItem = ({key, item, process, title = '', date, user, dont, nice, must,
       </Header>
       <Meta>{moment(date).format('YYYY-MM-DD')} / {user}</Meta>
       <Reactions>
-        <span><FaThumbsUp color="#00bcd4" /> {dont}</span>
+        <span><FaThumbsUp color="#00bcd4" /> {must}</span>
         <span><FaRegThumbsUp /> {nice}</span>
-        <span><FaThumbsDown color="#f44336" /> {must}</span>
+        <span><FaThumbsDown color="#f44336" /> {dont}</span>
       </Reactions>
     </TaskCard>
   )
