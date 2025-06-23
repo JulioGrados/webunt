@@ -32,37 +32,37 @@ const Footer = () => {
                         Visítanos
                     </FooterTitle>
                     <FooterList>
-                        <FooterListItem hre="/">
+                        <FooterListItem href="/">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Incio
                             </FooterListItemName>
                         </FooterListItem>
-                        <FooterListItem hre="/programas">
+                        <FooterListItem href="/programas">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Programas
                             </FooterListItemName>
                         </FooterListItem>
-                        <FooterListItem hre="/iniciativas">
+                        <FooterListItem href="/iniciativas">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Iniciativas
                             </FooterListItemName>
                         </FooterListItem>
-                        <FooterListItem hre="/nosotros">
+                        <FooterListItem href="/nosotros">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Nosotros
                             </FooterListItemName>
                         </FooterListItem>
-                        <FooterListItem hre="/portafolio">
+                        <FooterListItem href="/portafolio">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Portafolio
                             </FooterListItemName>
                         </FooterListItem>
-                        <FooterListItem hre="/contactanos">
+                        <FooterListItem href="/contactanos">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Contáctanos
@@ -75,19 +75,19 @@ const Footer = () => {
                         Programas
                     </FooterTitle>
                     <FooterList>
-                        <FooterListItem hre="/programas">
+                        <FooterListItem href="/programas">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Innova
                             </FooterListItemName>
                         </FooterListItem>
-                        <FooterListItem hre="/programas">
+                        <FooterListItem href="/programas">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Academy
                             </FooterListItemName>
                         </FooterListItem>
-                        <FooterListItem hre="/programas">
+                        <FooterListItem href="/programas">
                             <FooterListItemCircle />
                             <FooterListItemName>
                                 Escala
