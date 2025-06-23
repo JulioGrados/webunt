@@ -58,7 +58,7 @@ const Cover = () => {
                                 <CoverButtonOne href='/login'>
                                     Iniciar Sesión
                                 </CoverButtonOne>
-                                <CoverButtonTwo>
+                                <CoverButtonTwo href='/contactanos'>
                                     Contáctanos
                                 </CoverButtonTwo>
                             </CoverButtons>

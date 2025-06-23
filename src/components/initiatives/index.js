@@ -26,7 +26,7 @@ const Initiative = ({index, img, text, name, supported, supporimg, margin = true
                         </InitiativeSupportedName>
                     </InitiativeSupportedContent>
                 </InitiativeSupported>
-                <InitiativeButton>
+                <InitiativeButton href='/iniciativas'>
                     Leer más
                 </InitiativeButton>
             </InitiativeFooter>

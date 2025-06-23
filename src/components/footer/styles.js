@@ -98,7 +98,7 @@ export const FooterTitle = styled.h3`
     font-size: 18px;
     font-weight: 600;
 `
-export const FooterList = styled.ul`
+export const FooterList = styled.div`
     margin-top: 15px;
 `
 export const FooterListItem = styled.a`
@@ -119,7 +119,7 @@ export const FooterListItemCircle = styled.div`
     background-color: #032539;
     margin-right: 15px;
 `
-export const FooterListItemName =styled.a`
+export const FooterListItemName =styled.span`
     font-weight: 300;
     font-size: 13px;
     color: #000;
